@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Domains\Users\Providers;
+namespace Codecasts\Domains\Users\Providers;
 
 use Codecasts\Support\Domain\ServiceProvider;
-use App\Domains\Users\Database\Factories\UserFactory;
-use App\Domains\Users\Database\Migrations\CreateUsersTable;
-use App\Domains\Users\Database\Migrations\CreatePasswordResetsTable;
-use App\Domains\Users\Database\Seeders\UsersSeeder;
-use App\Domains\Users\Contracts;
-use App\Domains\Users\Repositories;
+use Codecasts\Domains\Users\Database\Factories\UserFactory;
+use Codecasts\Domains\Users\Database\Migrations\CreateUsersTable;
+use Codecasts\Domains\Users\Database\Migrations\CreatePasswordResetsTable;
+use Codecasts\Domains\Users\Database\Seeders\UsersSeeder;
+use Codecasts\Domains\Users\Contracts;
+use Codecasts\Domains\Users\Repositories;
 
 /**
  * Class DomainServiceProvider.

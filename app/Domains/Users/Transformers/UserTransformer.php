@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Domains\Users\Transformers;
+namespace Codecasts\Domains\Users\Transformers;
 
-use App\Domains\Users\User;
+use Codecasts\Domains\Users\User;
 use League\Fractal\TransformerAbstract as Transformer;
 
 /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Units\Home\Providers;
+namespace Codecasts\Units\Home\Providers;
 
 use Codecasts\Support\Units\ServiceProvider;
 

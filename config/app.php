@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'My Application',
+    'name' => 'CODECASTS',
 
     /*
     |--------------------------------------------------------------------------
@@ -64,7 +64,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'America/Sao_Paulo',
 
     /*
     |--------------------------------------------------------------------------
@@ -77,7 +77,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'pt_BR',
 
     /*
     |--------------------------------------------------------------------------
@@ -181,14 +181,14 @@ return [
         /**
          * Domains
          */
-        App\Domains\Users\Providers\DomainServiceProvider::class,
+        Codecasts\Domains\Users\Providers\DomainServiceProvider::class,
 
         /**
          * Units
          */
-        App\Units\Core\Providers\UnitServiceProvider::class,
-        App\Units\Auth\Providers\UnitServiceProvider::class,
-        App\Units\Home\Providers\UnitServiceProvider::class,
+        Codecasts\Units\Core\Providers\UnitServiceProvider::class,
+        Codecasts\Units\Auth\Providers\UnitServiceProvider::class,
+        Codecasts\Units\Home\Providers\UnitServiceProvider::class,
 
     ],
 

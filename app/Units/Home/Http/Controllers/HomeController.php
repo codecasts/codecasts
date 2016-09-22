@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Units\Home\Http\Controllers;
+namespace Codecasts\Units\Home\Http\Controllers;
 
 use Codecasts\Support\Http\Controller;
 

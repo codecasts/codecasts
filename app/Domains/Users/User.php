@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Domains\Users;
+namespace Codecasts\Domains\Users;
 
-use App\Domains\Users\Presenters\UserPresenter;
+use Codecasts\Domains\Users\Presenters\UserPresenter;
 use Codecasts\Presenter\Presentable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;

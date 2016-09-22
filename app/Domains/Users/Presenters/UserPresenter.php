@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domains\Users\Presenters;
+namespace Codecasts\Domains\Users\Presenters;
 
 use Codecasts\Presenter\Presenter;
 use Illuminate\Support\Str;

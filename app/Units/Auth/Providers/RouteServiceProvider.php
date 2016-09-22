@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Units\Auth\Providers;
+namespace Codecasts\Units\Auth\Providers;
 
-use App\Units\Auth\Routes\Api;
-use App\Units\Auth\Routes\Console;
-use App\Units\Auth\Routes\Web;
+use Codecasts\Units\Auth\Routes\Api;
+use Codecasts\Units\Auth\Routes\Console;
+use Codecasts\Units\Auth\Routes\Web;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
@@ -17,7 +17,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'App\Units\Auth\Http\Controllers';
+    protected $namespace ='Codecasts\Units\Auth\Http\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.

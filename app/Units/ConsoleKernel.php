@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Units;
+namespace Codecasts\Units;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel;

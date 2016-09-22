@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Units\Auth\Routes;
+namespace Codecasts\Units\Auth\Routes;
 
 use Codecasts\Support\Console\Routing\RouteFile;
 

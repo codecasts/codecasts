@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Units\Auth\Http\Controllers;
+namespace Codecasts\Units\Auth\Http\Controllers;
 
 use Codecasts\Support\Http\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
