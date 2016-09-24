@@ -1,27 +1,115 @@
-# Laravel PHP Framework
+# CODECASTS
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+Application's GIT Repository.
+This document should be the ultimate guide on running and specs about the application source code.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## Build status
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+@TODO
 
-## Official Documentation
+## Index
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+* [Build status](#build-status)
+  * [Development](#development)
+    * [Requirements](#requirements)
+    * [Operating the docker environment](#operating-the-docker-environment)
+      * [Starting services](#starting-services)
+      * [Stopping services](#stopping-services)
+      * [Running internal commands](#running-internal-commands)
+      * [List of Services](#list-of-services)
+  * [Coding Guide Lines](#coding-guide-lines)
+    * [Style](#style)
+    * [Unit Testing](#unit-testing)
 
-## Contributing
+## Development
+For using the docker version (recommended) of the environment, you first need to stop local
+services like MySQL, Redis, Elasticsearch and webservers running on port 80.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+### Requirements
 
-## Security Vulnerabilities
+- **Docker** >= 1.10.3.
+- **docker-compose**, if not already bundled in your docker install.
+- A virtual host named **codecasts.app** pointing to 127.0.0.1, this step is needed since the social login callbacks are using this URL.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+### Operating the docker environment
 
-## License
+#### Starting services
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+- Option 1: Keeping the output visible on the terminal
+```php
+docker-compose up
+```
+
+- Option 2 : Sending the output of the services to background
+```php
+docker-compose up -d
+```
+
+#### Stopping services
+
+- Option 1: When the output is visible (started with option 1), just hit **`control + c`** to stop it.
+
+- Option 2: When the services are on background or failed to stop with **`control + c`**, you can stop them with the following command:
+```php
+docker-compose down
+```
+
+#### Running internal commands
+
+When commands like artisan are needed, those commands would need to run inside the docker containers, to do so, use the following sintax:
+
+```php
+docker-compose run {service-name} {command-you-want-to-run}
+```
+
+For example. to run migrations, you can do:
+
+```php
+docker-compose run app php artisan migrate
+```
+
+Another example, starting a terminal inside the MySQL service
+
+```php
+docker-compose run mysql /bin/bash
+```
+
+#### List of Services
+The service names can be located inside the **`docker-compose.yml`** file, right now, the following are enabled:
+
+| Service       | Description                                                   |
+|---------------|---------------------------------------------------------------|
+| **`cache`**   | Runs a Redis 3.2 Instance for Cache and queues                |
+| **`mysql`**   | Runs a MySQL 5.7 Instance for Database                        |
+| **`app`**     | PHP and Caddy Instance that runs the apllication              |
+| **`queue`**   | A PHP-CLI container, running php artisan queue:listen command |
+| **`elastic`** | Elasticsearch instance for search indexing                    |
+
+
+## Coding Guide Lines
+
+### Style
+**PSR-1** & **PSR-2** should be enforced, a copy of php-cd-fixer is distributed along with the PHP Docker image, so the following command can automatically format the code before commiting:
+
+```php
+docker-compose run app php-cs-fixer --diff --fixers=-psr1,-psr2 fix app
+```
+
+As a alternative, you can alias that command as **`psr2`** or other name:
+
+```php
+# Bash and ZSH
+alias psr2="docker-compose run app php-cs-fixer --diff --fixers=-psr1,-psr2 fix"
+
+# Fish shell
+alias psr2 "docker-compose run app php-cs-fixer --diff --fixers=-psr1,-psr2 fix"
+```
+
+### Unit Testing
+Following the same structure of existing tests, the main rule it keep tests under the same namespace as the class being tested, in order to avoid useless imports and keep code cleaner
+
+Code coverage as HTML is already ignored on git when generated on the `coverage` directory, to run tests with coverage reports, use
+
+```php
+php vendor/bin/phpunit --coverage-html=coverage
+```
