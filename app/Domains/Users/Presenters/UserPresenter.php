@@ -2,7 +2,7 @@
 
 namespace Codecasts\Domains\Users\Presenters;
 
-use Codecasts\Presenter\Presenter;
+use Codecasts\Support\ViewPresenter\Presenter;
 use Illuminate\Support\Str;
 
 /**
