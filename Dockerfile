@@ -10,9 +10,3 @@ RUN sudo chown -R php-user:php-user /var/www/app
 # install the dependencies (mainly composer deps)
 RUN cd /var/www/app && \
     composer install --no-interaction --no-progress --prefer-dist
-
-# Overwrite Tini Entry Point
-ENTRYPOINT ["/scripts/start.sh"]
-
-# Enforce start command
-CMD ["/home/php-user/start.sh"]
