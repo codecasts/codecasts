@@ -1,0 +1,225 @@
+
+.well {
+    @include box-shadow(none);
+}
+
+a.list-group-item {
+
+    &.active,
+    &.active:hover,
+    &.active:focus {
+        border-color: $list-group-border;
+    }
+
+    &-success {
+        &.active {
+            background-color: $state-success-bg;
+        }
+
+        &.active:hover,
+        &.active:focus {
+            background-color: darken($state-success-bg, 5%);
+        }
+    }
+
+    &-warning {
+        &.active {
+            background-color: $state-warning-bg;
+        }
+
+        &.active:hover,
+        &.active:focus {
+            background-color: darken($state-warning-bg, 5%);
+        }
+    }
+
+    &-danger {
+        &.active {
+            background-color: $state-danger-bg;
+        }
+
+        &.active:hover,
+        &.active:focus {
+            background-color: darken($state-danger-bg, 5%);
+        }
+    }
+}
+
+.modal {
+    .close {
+        color: $text-color;
+    }
+}
+
+.popover {
+    color: $text-color;
+}
+
+.panel {
+    &-default {
+        .close {
+            color: $text-color;
+        }
+    }
+    .panel-heading {
+        text-align: center;
+        font-weight: bold;
+        &, h2 {
+            font-size: 1.1em;
+        }
+        h2 {
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase;
+        }
+        .label, .badge {
+            position: absolute;
+            left: 2em;
+            display: block;
+        }
+    }
+    .scsson-level {
+        border-bottom: 2px solid;
+    }
+}
+
+.panel-body {
+    &.text-justify {
+        height: 100px;
+    }
+}
+
+.panel-footer {
+    padding: $panel-footer-padding;
+    background-color: $panel-footer-bg;
+    border-top: 1px solid $panel-inner-border;
+}
+
+.scsson-box {
+    background-color: $gray-lighter;
+    border: 2px solid $gray-lighter;
+    border-radius: 3px;
+    margin-bottom: 40px;
+    display: block;
+    header {
+        color: #FFF;
+        padding: 0 10px;
+        height: 155px;
+
+        p, h1, h2 {
+            text-align: left;
+        }
+        h1, h2 {
+            font-family: $font-family-sans-serif;
+            margin: 0 -10px;
+            font-weight: bold;
+            color: $brand-primary;
+            padding: 15px 10px;
+            display: block;
+            clear: both;
+            font-size: 1em;
+            background: #FFF;
+        }
+    }
+    footer {
+        //background-color: lighten($brand-primary, 60%);
+        text-align: center;
+        padding: 0 10px;
+        background-color: #FFF;
+        &.has-geo {
+            color: #FFF;
+        }
+    }
+
+    .scsson-pre-title {
+        height: 15px;
+        vertical-align: middle;
+    }
+
+    .scsson-post-title {
+        height: 30px;
+        vertical-align: middle;
+
+    }
+
+    .scsson-level {
+        position: relative;
+        display: block;
+        float: right;
+        top: -8px;
+        text-transform: uppercase;
+    }
+
+    .scsson-length {
+        //position: relative;
+        display: block;
+        float: left;
+        height: 30px;
+        line-height: 30px;
+        vertical-align: middle;
+        //top: -8px;
+        //text-transform: uppercase;
+    }
+
+    .scsson-date {
+        //position: relative;
+        display: block;
+        float: right;
+        height: 30px;
+        line-height: 30px;
+        //top: -8px;
+        //text-transform: uppercase;
+    }
+
+    .scsson-paid {
+        position: relative;
+        display: block;
+        float: right;
+        margin-right: 4px;
+        top: -8px;
+    }
+
+    .scsson-desc {
+        font-weight: 400;
+        font-size: 0.9em;
+        color: $brand-primary;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: 60px;
+    }
+
+    .scsson-track {
+        display: block;
+        float: left;
+        width: 100%;
+        color: #009586;
+        font-weight: bold;
+    }
+
+    .track-title {
+        color: #009586;
+    }
+
+    .level {
+        span {
+            background: $brand-danger;
+            color: #FFF;
+            //font-weight: regularbold;
+            border-radius: 3px;
+            padding: 3px;
+            font-size: 0.7em;
+        }
+
+    }
+    .paid {
+        text-align: right;
+    }
+}
+
+.question-tr-resolved {
+    background-color: #F5FFFE;
+}
+
+blockquote p {
+    overflow-x: scroll;
+}

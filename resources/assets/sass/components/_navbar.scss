@@ -1,0 +1,48 @@
+.profile-image {
+    position: relative;
+    margin-top: -15px;
+    margin-bottom: -15px;
+    border-radius: 50%;
+    left: -7px;
+    max-width: 30px;
+    max-height: 30px;
+    width: 30px;
+    height: 30px;
+}
+
+.navbar-brand {
+    font-weight: 300;
+    font-size: 24px;
+    padding: 18px 15px;
+    & > span {
+        font-weight: 700;
+    }
+}
+
+.navbar {
+    border-width: 0;
+
+    &-default {
+
+        .badge {
+            background-color: #fff;
+            color: $navbar-default-bg;
+        }
+    }
+
+    &-inverse {
+
+        .badge {
+            background-color: #fff;
+            color: $navbar-inverse-bg;
+        }
+    }
+
+    &-brand {
+        line-height: 1;
+    }
+
+    i {
+        font-weight: 700;
+    }
+}

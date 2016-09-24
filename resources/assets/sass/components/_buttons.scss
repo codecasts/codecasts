@@ -1,0 +1,12 @@
+
+.btn {
+    border-width: 2px;
+}
+
+.btn:active {
+    @include box-shadow(none);
+}
+
+.btn-group.open .dropdown-toggle {
+    @include box-shadow(none);
+}
