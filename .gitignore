@@ -5,6 +5,7 @@
 Homestead.json
 Homestead.yaml
 .env
+coverage.xml
 
 # used during migration
 /app/_move
