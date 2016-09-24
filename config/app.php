@@ -172,7 +172,7 @@ return [
         /**
          * Support Service Providers...
          */
-
+        Codecasts\Support\ElasticSearch\Providers\ElasticSearchServiceProvider::class,
 
         /*
          * Application Service Providers...
