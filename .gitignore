@@ -8,4 +8,4 @@ Homestead.yaml
 coverage.xml
 
 # used during migration
-/app/_move
+_move

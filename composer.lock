@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "82b8bb98174f9b160d8d0b0797a8c4b4",
-    "content-hash": "ea3b2d2d2ba5f6042bf7a999a425d458",
+    "hash": "6b2b25defa8f9dd33cde8a44f1529319",
+    "content-hash": "92faea7d69688e2c49fcf8f46c71f024",
     "packages": [
         {
             "name": "adamwathan/eloquent-oauth",
