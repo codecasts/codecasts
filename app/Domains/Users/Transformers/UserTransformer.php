@@ -10,6 +10,13 @@ use League\Fractal\TransformerAbstract as Transformer;
  */
 class UserTransformer extends Transformer
 {
+    /**
+     * Transform (normalize) the User class for api resources.
+     *
+     * @param User $user The user instance
+     *
+     * @return array Normalized array with user's data
+     */
     public function transform(User $user)
     {
         return [
