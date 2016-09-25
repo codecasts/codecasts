@@ -183,6 +183,7 @@ return [
          */
         Codecasts\Domains\Users\Providers\DomainServiceProvider::class,
         Codecasts\Domains\Lessons\Providers\DomainServiceProvider::class,
+        Codecasts\Domains\Podcasts\Providers\DomainServiceProvider::class,
 
         /**
          * Units
