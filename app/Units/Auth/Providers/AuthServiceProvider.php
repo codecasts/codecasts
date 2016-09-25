@@ -12,7 +12,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-       'Codecasts\Model' =>'Codecasts\Policies\ModelPolicy',
+       'Codecasts\Model' => 'Codecasts\Policies\ModelPolicy',
     ];
 
     /**
