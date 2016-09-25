@@ -10,6 +10,9 @@ use Illuminate\Database\Seeder;
  */
 class UserSeeder extends Seeder
 {
+    /**
+     * @todo improve users seeders
+     */
     public function run()
     {
         factory(User::class)->times(10)->create();
