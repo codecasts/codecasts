@@ -3,12 +3,6 @@
 # fails when error any of the next commands
 set -e
 
-# Copy over testing configuration.
-cp .env.testing .env
-
-# Generate an application key.
-php artisan key:generate
-
 # Run PHPUnit Tests
 phpdbg -qrr ./vendor/bin/phpunit --colors=never --coverage-text
 
