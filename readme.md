@@ -5,7 +5,11 @@ This document should be the ultimate guide on running and specs about the applic
 
 ## Build status
 
-@TODO
+| Branch        | Environment      | URL                                                                                 | Status                                                                                                                                     | Test Coverage                                                                                                                        |                     
+|---------------|------------------|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|---------------------------------------------|
+| **`master`**  | **`production`** | [https://codecasts.com.br](https://codecasts.com.br)                                | [![Build Status](https://travis-ci.org/codecasts/codecasts.svg?branch=master)](https://travis-ci.org/codecasts/codecasts)                  | [![codecov](https://codecov.io/gh/codecasts/codecasts/branch/master/graph/badge.svg)](https://codecov.io/gh/codecasts/codecasts)  |
+| **`develop`** | **`staging`**    | [https://staging.codecasts.com.br](https://staging.codecasts.com.br)                | [![Build Status](https://travis-ci.org/codecasts/codecasts.svg?branch=develop)](https://travis-ci.org/codecasts/codecasts)                 | [![codecov](https://codecov.io/gh/codecasts/codecasts/branch/develop/graph/badge.svg)](https://codecov.io/gh/codecasts/codecasts) |
+
 
 ## Index
 
