@@ -190,6 +190,7 @@ return [
          */
         Migrator\MigrationServiceProvider::class,
         Artesaos\Warehouse\WarehouseServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
 
         /**
          * Support Service Providers...
