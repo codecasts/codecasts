@@ -6,6 +6,6 @@ Homestead.json
 Homestead.yaml
 .env
 coverage.xml
-
+/public/coverage
 # used during migration
 _move
