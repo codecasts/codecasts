@@ -2,27 +2,11 @@
 
 namespace Codecasts\Domains\Users\Database\Migrations;
 
+use Codecasts\Support\Domain\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Migrations\Migration;
 
-/**
- * Class CreateUsersTable.
- */
 class CreateUsersTable extends Migration
 {
-    /**
-     * @var \Illuminate\Database\Schema\Builder
-     */
-    protected $schema;
-
-    /**
-     * Migration constructor.
-     */
-    public function __construct()
-    {
-        $this->schema = app('db')->connection()->getSchemaBuilder();
-    }
-
     /**
      * Run the migrations.
      */
@@ -30,10 +14,23 @@ class CreateUsersTable extends Migration
     {
         $this->schema->create('users', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('username')->unique()->index();
             $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password');
+            $table->string('email');
+            $table->string('avatar')->nullable();
+            $table->string('url')->nullable();
+            $table->string('location')->nullable();
+            $table->date('expires_at')->nullable();
+            $table->string('customer_id')->nullable();
+            $table->string('subscription_id')->nullable();
+            $table->string('subscription_plan')->nullable();
+            $table->boolean('subscription_active')->nullable();
+            $table->boolean('subscription_suspended')->nullable();
+            $table->boolean('admin')->default(false);
+            $table->boolean('guest')->default(false);
+            $table->text('link')->nullable();
             $table->rememberToken();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

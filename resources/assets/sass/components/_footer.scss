@@ -1,0 +1,17 @@
+ul.footer-links {
+  color: $brand-success;
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  & > li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    line-height: 2em;
+    vertical-align: middle;
+    list-style: none;
+    & > a, a:hover, a:visited {
+      color: $brand-success;
+    }
+  }
+}

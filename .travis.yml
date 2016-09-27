@@ -1,0 +1,29 @@
+# Generic language for docker builds
+language: generic
+
+# run commands as superuser
+sudo: required
+
+# enable docker
+services:
+  - docker
+
+# login on docker hub
+before_install:
+  - docker login -u "$DOCKER_USER" -p "$DOCKER_PASSWORD"
+
+# build this code into a docker image
+install:
+  - docker build -t $DOCKER_REPO:$TRAVIS_BRANCH .
+
+# run unit tests
+script:
+  - docker run -it -e TRAVIS_COMMIT=$TRAVIS_COMMIT -e TRAVIS_BRANCH=$TRAVIS_BRANCH -e TRAVIS_BUILD_NUMBER=$TRAVIS_BUILD_NUMBER -e CODECOV_TOKEN=$CODECOV_TOKEN $DOCKER_REPO:$TRAVIS_BRANCH bash .test.sh
+
+# if tests passes, push the docker image
+after_success:
+  - docker push $DOCKER_REPO:$TRAVIS_BRANCH
+
+# notify slack about it
+notifications:
+  slack: $SLACK_TOKEN

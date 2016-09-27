@@ -1,0 +1,9 @@
+
+.progress {
+    height: 10px;
+    @include box-shadow(none);
+    .progress-bar {
+        font-size: 10px;
+        line-height: 10px;
+    }
+}

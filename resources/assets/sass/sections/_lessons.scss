@@ -1,0 +1,18 @@
+.videocontent {
+    margin-bottom: 10px;
+    figure {
+        position: relative;
+        figcaption {
+            display: block;
+            position: absolute;
+            top: 65%;
+            width: 100%;
+            font-size: 1.7em;
+            text-align: center;
+        }
+    }
+}
+
+.margin1px {
+    margin: 1px;
+}

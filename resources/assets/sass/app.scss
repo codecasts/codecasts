@@ -1,9 +1,26 @@
 
-// Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
-
-// Variables
+// Variables and Mixins
 @import "variables";
+@import "./../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+// Fonts
+@import "components/fonts";
 
 // Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "bootstrap";
+
+// Theme
+@import "components/buttons";
+@import "components/code";
+@import "components/containers";
+@import "components/forms";
+@import "components/indicators";
+@import "components/navbar";
+@import "components/navs";
+@import "components/progress";
+@import "components/subscription";
+@import "components/pagination";
+@import "components/social";
+@import "components/typography";
+@import "components/footer.scss";
+@import "sections/lessons";

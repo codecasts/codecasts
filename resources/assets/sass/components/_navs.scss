@@ -1,0 +1,29 @@
+
+.nav {
+    .open > a,
+    .open > a:hover,
+    .open > a:focus {
+        border-color: transparent;
+    }
+}
+
+.navbar-nav > li > a {
+    font-size: 17px;
+}
+
+
+.pager {
+    a,
+    a:hover {
+        color: #fff;
+    }
+
+    .disabled {
+        & > a,
+        & > a:hover,
+        & > a:focus,
+        & > span {
+            background-color: $pagination-disabled-bg;
+        }
+    }
+}

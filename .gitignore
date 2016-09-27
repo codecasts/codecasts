@@ -5,7 +5,7 @@
 Homestead.json
 Homestead.yaml
 .env
-composer.lock
-
-# temporary for support package development
-/support
+coverage.xml
+/public/coverage
+# used during migration
+_move

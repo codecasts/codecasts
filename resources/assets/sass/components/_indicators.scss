@@ -1,0 +1,20 @@
+
+.close {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.4;
+
+    &:hover,
+    &:focus {
+        color: #fff;
+        opacity: 1;
+    }
+}
+
+.alert {
+
+    .alert-link {
+        color: #fff;
+        text-decoration: underline;
+    }
+}
