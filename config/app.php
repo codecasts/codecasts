@@ -192,6 +192,7 @@ return [
         Artesaos\Warehouse\WarehouseServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
         Maknz\Slack\SlackServiceProvider::class,
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
 
         /*
          * Support Service Providers...
