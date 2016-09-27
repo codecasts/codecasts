@@ -191,6 +191,7 @@ return [
         Migrator\MigrationServiceProvider::class,
         Artesaos\Warehouse\WarehouseServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        Maknz\Slack\SlackServiceProvider::class,
 
         /**
          * Support Service Providers...
