@@ -51,7 +51,7 @@ return [
     |
     */
 
-    'url' => (env('APP_SECURE') ? 'https://' : 'http://' ) . env('APP_DOMAIN'),
+    'url' => (env('APP_SECURE') ? 'https://' : 'http://').env('APP_DOMAIN'),
 
     /*
     |--------------------------------------------------------------------------
@@ -193,7 +193,7 @@ return [
         Barryvdh\Debugbar\ServiceProvider::class,
         Maknz\Slack\SlackServiceProvider::class,
 
-        /**
+        /*
          * Support Service Providers...
          */
         Codecasts\Support\ElasticSearch\Providers\ElasticSearchServiceProvider::class,
@@ -202,14 +202,14 @@ return [
          * Application Service Providers...
          */
 
-        /**
+        /*
          * Domains
          */
         Codecasts\Domains\Users\Providers\DomainServiceProvider::class,
         Codecasts\Domains\Lessons\Providers\DomainServiceProvider::class,
         Codecasts\Domains\Podcasts\Providers\DomainServiceProvider::class,
 
-        /**
+        /*
          * Units
          */
         Codecasts\Units\Core\Providers\UnitServiceProvider::class,

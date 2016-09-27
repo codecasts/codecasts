@@ -14,7 +14,7 @@ return [
     |
     */
 
-    /**
+    /*
      * MailGun Config
      */
     'mailgun' => [
@@ -22,12 +22,12 @@ return [
         'secret' => env('MAILGUN_SECRET'),
     ],
 
-    /**
+    /*
      * Iugu Config
      */
-    'iugu'  =>  [
-        'client_id' =>  env('IUGU_CLIENT_ID'),
-        'api_token' =>  env('IUGU_API_TOKEN'),
+    'iugu' => [
+        'client_id' => env('IUGU_CLIENT_ID'),
+        'api_token' => env('IUGU_API_TOKEN'),
     ],
 
 ];
