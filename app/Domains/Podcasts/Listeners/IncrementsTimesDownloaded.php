@@ -10,9 +10,7 @@ class IncrementsTimesDownloaded
     {
         $podcast = $event->podcast;
 
-        $timesDownloaded = $podcast->times_downloaded;
-        ++$timesDownloaded;
-        $podcast->times_downloaded = $timesDownloaded;
+        $podcast->times_downloaded++;
         $podcast->save();
     }
 }
