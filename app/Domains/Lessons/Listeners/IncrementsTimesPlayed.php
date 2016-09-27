@@ -10,9 +10,7 @@ class IncrementsTimesPlayed
     {
         $lesson = $event->lesson;
 
-        $timesPlayed = $lesson->times_played;
-        ++$timesPlayed;
-        $lesson->times_played = $timesPlayed;
+        $lesson->times_played++;
         $lesson->save();
     }
 }

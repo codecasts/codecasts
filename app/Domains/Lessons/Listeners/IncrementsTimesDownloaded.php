@@ -10,9 +10,7 @@ class IncrementsTimesDownloaded
     {
         $lesson = $event->lesson;
 
-        $timesDownloaded = $lesson->times_downloaded;
-        ++$timesDownloaded;
-        $lesson->times_downloaded = $timesDownloaded;
+        $lesson->times_downloaded++;
         $lesson->save();
     }
 }
