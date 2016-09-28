@@ -13,7 +13,7 @@ class LogLessonPlayed
 
             $event->lesson->logs()->create([
                 'user_id' => $user_id,
-                'action' => 'play',
+                'action'  => 'play',
             ]);
         }
     }

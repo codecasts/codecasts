@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'sec' => 'seg',
+    'sec'     => 'seg',
     'seconds' => 'segundos',
-    'min' => 'min',
+    'min'     => 'min',
     'minutes' => 'minutos',
 ];

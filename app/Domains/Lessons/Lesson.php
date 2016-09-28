@@ -8,7 +8,6 @@ use Codecasts\Domains\Users\User;
 use Codecasts\Support\Media\Exceptions\UrlNotFound;
 use Codecasts\Support\Media\S3MediaManager;
 use Codecasts\Support\ViewPresenter\Presentable;
-use Codecasts\Support\ViewPresenter\PresentableTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -71,7 +70,7 @@ class Lesson extends Model
 
             return $manager->getDownloadUrl();
         } catch (UrlNotFound $e) {
-            return null;
+            return;
         }
     }
 
@@ -82,7 +81,7 @@ class Lesson extends Model
 
             return $manager->getStreamingUrl();
         } catch (UrlNotFound $e) {
-            return null;
+            return;
         }
     }
 
@@ -93,7 +92,7 @@ class Lesson extends Model
 
             return $manager->getThumbContent();
         } catch (UrlNotFound $e) {
-            return null;
+            return;
         }
     }
 

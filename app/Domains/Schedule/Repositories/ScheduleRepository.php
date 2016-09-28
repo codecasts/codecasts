@@ -4,9 +4,9 @@ namespace Codecasts\Domains\Schedule\Repositories;
 
 use Artesaos\Warehouse\AbstractCrudRepository;
 use Artesaos\Warehouse\Traits\ImplementsFractal;
+use Codecasts\Domains\Schedule\Contracts\ScheduleRepository as ScheduleRepositoryContract;
 use Codecasts\Domains\Schedule\Schedule;
 use Codecasts\Domains\Schedule\Transformers\ScheduleTransformer;
-use Codecasts\Domains\Schedule\Contracts\ScheduleRepository as ScheduleRepositoryContract;
 
 class ScheduleRepository extends AbstractCrudRepository implements ScheduleRepositoryContract
 {

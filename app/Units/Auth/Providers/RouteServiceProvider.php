@@ -5,8 +5,8 @@ namespace Codecasts\Units\Auth\Providers;
 use Codecasts\Units\Auth\Routes\Api;
 use Codecasts\Units\Auth\Routes\Console;
 use Codecasts\Units\Auth\Routes\Web;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Route;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -48,7 +48,7 @@ class RouteServiceProvider extends ServiceProvider
     {
         (new Web([
             'middleware' => 'web',
-            'namespace' => $this->namespace,
+            'namespace'  => $this->namespace,
         ]))->register();
     }
 
@@ -61,8 +61,8 @@ class RouteServiceProvider extends ServiceProvider
     {
         (new Api([
             'middleware' => 'api',
-            'namespace' => $this->namespace,
-            'prefix' => 'api',
+            'namespace'  => $this->namespace,
+            'prefix'     => 'api',
         ]))->register();
     }
 

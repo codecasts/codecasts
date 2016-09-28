@@ -58,30 +58,30 @@ abstract class BaseMediaManager
     }
 
     /**
-     * @return string Decoded Media Download URL
-     *
      * @throws UrlNotFound
+     *
+     * @return string Decoded Media Download URL
      */
     abstract public function getDownloadUrl();
 
     /**
-     * @return string Decoded Media Streaming URL
-     *
      * @throws UrlNotFound
+     *
+     * @return string Decoded Media Streaming URL
      */
     abstract public function getStreamingUrl();
 
     /**
-     * @return string Decoded Media Thumbnail URL
-     *
      * @throws UrlNotFound
+     *
+     * @return string Decoded Media Thumbnail URL
      */
     abstract public function getThumbUrl();
 
     /**
-     * @return string
-     *
      * @throws UrlNotFound
+     *
+     * @return string
      */
     abstract public function getThumbContent();
 }

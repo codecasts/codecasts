@@ -4,30 +4,30 @@ return [
     'meta' => [
 
         'defaults' => [
-            'title' => env('SEO_TITLE', 'CODECASTS'),
+            'title'       => env('SEO_TITLE', 'CODECASTS'),
             'description' => env('SEO_DESCRIPTION', 'Comece a aprender hoje!'),
-            'separator' => ' - ',
-            'keywords' => [],
-            'canonical' => false,
+            'separator'   => ' - ',
+            'keywords'    => [],
+            'canonical'   => false,
         ],
 
         'webmaster_tags' => [
-            'google' => null,
-            'bing' => null,
-            'alexa' => null,
+            'google'    => null,
+            'bing'      => null,
+            'alexa'     => null,
             'pinterest' => null,
-            'yandex' => null,
+            'yandex'    => null,
         ],
     ],
     'opengraph' => [
 
         'defaults' => [
-            'title' => env('SEO_TITLE', 'CODECASTS'),
+            'title'       => env('SEO_TITLE', 'CODECASTS'),
             'description' => env('SEO_DESCRIPTION', 'Comece a aprender hoje!'),
-            'url' => false,
-            'type' => false,
-            'site_name' => false,
-            'images' => [],
+            'url'         => false,
+            'type'        => false,
+            'site_name'   => false,
+            'images'      => [],
         ],
     ],
     'twitter' => [

@@ -17,9 +17,9 @@ trait Presentable
     /**
      * Returns a new or existing presenter instance.
      *
-     * @return mixed
-     *
      * @throws PresenterException
+     *
+     * @return mixed
      */
     public function present()
     {

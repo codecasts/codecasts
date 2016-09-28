@@ -4,9 +4,9 @@ namespace Codecasts\Domains\Suggestions\Repositories;
 
 use Artesaos\Warehouse\AbstractCrudRepository;
 use Artesaos\Warehouse\Traits\ImplementsFractal;
+use Codecasts\Domains\Suggestions\Contracts\SuggestionRepository as SuggestionRepositoryContract;
 use Codecasts\Domains\Suggestions\Suggestion;
 use Codecasts\Domains\Suggestions\Transformers\SuggestionTransformer;
-use Codecasts\Domains\Suggestions\Contracts\SuggestionRepository as SuggestionRepositoryContract;
 
 class SuggestionRepository extends AbstractCrudRepository implements SuggestionRepositoryContract
 {

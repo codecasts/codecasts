@@ -4,9 +4,9 @@ namespace Codecasts\Domains\Lessons\Repositories;
 
 use Artesaos\Warehouse\AbstractCrudRepository;
 use Artesaos\Warehouse\Traits\ImplementsFractal;
+use Codecasts\Domains\Lessons\Contracts\TrackRepository as TrackRepositoryContract;
 use Codecasts\Domains\Lessons\Track;
 use Codecasts\Domains\Lessons\Transformers\TrackTransformer;
-use Codecasts\Domains\Lessons\Contracts\TrackRepository as TrackRepositoryContract;
 
 class TrackRepository extends AbstractCrudRepository implements TrackRepositoryContract
 {

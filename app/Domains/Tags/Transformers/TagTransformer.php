@@ -2,8 +2,8 @@
 
 namespace Codecasts\Domains\Tags\Transformers;
 
-use League\Fractal\TransformerAbstract;
 use Codecasts\Domains\Tags\Tag;
+use League\Fractal\TransformerAbstract;
 
 class TagTransformer extends TransformerAbstract
 {

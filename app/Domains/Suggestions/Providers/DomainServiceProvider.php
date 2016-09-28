@@ -2,9 +2,9 @@
 
 namespace Codecasts\Domains\Suggestions\Providers;
 
+use Codecasts\Domains\Suggestions\Contracts\SuggestionRepository as SuggestionRepositoryContract;
 use Codecasts\Domains\Suggestions\Database\Migrations\CreateSuggestionsTable;
 use Codecasts\Domains\Suggestions\Database\Migrations\CreateSuggestionsVotesTable;
-use Codecasts\Domains\Suggestions\Contracts\SuggestionRepository as SuggestionRepositoryContract;
 use Codecasts\Domains\Suggestions\Repositories\SuggestionRepository;
 use Codecasts\Support\Domain\ServiceProvider;
 

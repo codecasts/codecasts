@@ -2,10 +2,10 @@
 
 namespace Codecasts\Support\Domain;
 
-use ReflectionClass;
-use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 use Illuminate\Support\Collection;
+use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 use Migrator\MigratorTrait as HasMigrations;
+use ReflectionClass;
 
 /**
  * Abstract ServiceProvider for Domains.

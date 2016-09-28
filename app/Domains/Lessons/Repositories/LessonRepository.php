@@ -4,9 +4,9 @@ namespace Codecasts\Domains\Lessons\Repositories;
 
 use Artesaos\Warehouse\AbstractCrudRepository;
 use Artesaos\Warehouse\Traits\ImplementsFractal;
+use Codecasts\Domains\Lessons\Contracts\LessonRepository as LessonRepositoryContract;
 use Codecasts\Domains\Lessons\Lesson;
 use Codecasts\Domains\Lessons\Transformers\LessonTransformer;
-use Codecasts\Domains\Lessons\Contracts\LessonRepository as LessonRepositoryContract;
 use Codecasts\Support\ElasticSearch\Contracts\SearchRepository;
 use Codecasts\Support\ElasticSearch\SearchableTrait;
 

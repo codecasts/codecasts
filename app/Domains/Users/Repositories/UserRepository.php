@@ -4,8 +4,8 @@ namespace Codecasts\Domains\Users\Repositories;
 
 use Artesaos\Warehouse\AbstractCrudRepository;
 use Artesaos\Warehouse\Traits\ImplementsFractal;
-use Codecasts\Domains\Users\User;
 use Codecasts\Domains\Users\Contracts\UserRepository as UserRepositoryContract;
+use Codecasts\Domains\Users\User;
 
 /**
  * Class UserRepository.

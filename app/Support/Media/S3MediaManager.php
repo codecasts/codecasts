@@ -47,9 +47,9 @@ class S3MediaManager extends BaseMediaManager
      *
      * @param array $headers
      *
-     * @return string
-     *
      * @throws UrlNotFound
+     *
+     * @return string
      */
     protected function preSign($headers = [])
     {
@@ -58,7 +58,7 @@ class S3MediaManager extends BaseMediaManager
 
         $cmd = $s3->getCommand('GetObject', array_merge([
             'Bucket' => $this->bucket,
-            'Key' => $this->media,
+            'Key'    => $this->media,
         ], $headers));
 
         $request = $s3->createPresignedRequest($cmd, $this->ttl);
@@ -85,7 +85,7 @@ class S3MediaManager extends BaseMediaManager
 
             $object = $s3->getObject([
                 'Bucket' => $this->bucket,
-                'Key' => $this->media,
+                'Key'    => $this->media,
             ]);
 
             return (string) $object['Body'];

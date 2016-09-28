@@ -40,8 +40,6 @@ abstract class AbstractSocialParser implements SocialParser
 
             return $raw[$key];
         }
-
-        return;
     }
 
     /**

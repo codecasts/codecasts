@@ -13,7 +13,7 @@ class LogLessonDownloaded
 
             $event->lesson->logs()->create([
                 'user_id' => $user_id,
-                'action' => 'download',
+                'action'  => 'download',
             ]);
         }
     }

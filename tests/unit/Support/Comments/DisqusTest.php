@@ -6,7 +6,7 @@ use Illuminate\Contracts\View\Factory;
 use Mockery as m;
 
 /**
- * Test Disqus comments
+ * Test Disqus comments.
  */
 class DisqusTest extends \TestCase
 {

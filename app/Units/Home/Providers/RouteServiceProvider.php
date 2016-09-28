@@ -47,7 +47,7 @@ class RouteServiceProvider extends ServiceProvider
     {
         (new Web([
             'middleware' => 'web',
-            'namespace' => $this->namespace,
+            'namespace'  => $this->namespace,
         ]))->register();
     }
 
@@ -60,8 +60,8 @@ class RouteServiceProvider extends ServiceProvider
     {
         (new Api([
             'middleware' => 'api',
-            'namespace' => $this->namespace,
-            'prefix' => 'api',
+            'namespace'  => $this->namespace,
+            'prefix'     => 'api',
         ]))->register();
     }
 
