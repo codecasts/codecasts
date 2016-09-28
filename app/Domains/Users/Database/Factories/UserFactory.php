@@ -23,9 +23,9 @@ class UserFactory extends ModelFactory
         static $password;
 
         return [
-            'name' => $this->faker->name,
-            'email' => $this->faker->safeEmail,
-            'password' => $password ?: $password = bcrypt('secret'),
+            'name'           => $this->faker->name,
+            'email'          => $this->faker->safeEmail,
+            'password'       => $password ?: $password = bcrypt('secret'),
             'remember_token' => str_random(10),
         ];
     }

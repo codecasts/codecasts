@@ -2,8 +2,8 @@
 
 namespace Codecasts\Domains\Suggestions\Transformers;
 
-use League\Fractal\TransformerAbstract;
 use Codecasts\Domains\Suggestions\Suggestion;
+use League\Fractal\TransformerAbstract;
 
 class SuggestionTransformer extends TransformerAbstract
 {

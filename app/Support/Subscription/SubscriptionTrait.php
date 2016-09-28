@@ -109,7 +109,7 @@ trait SubscriptionTrait
         if (!$this->hasCustomerId()) {
             $customer = \Iugu_Customer::create([
                 'email' => $this->email,
-                'name' => $this->name,
+                'name'  => $this->name,
                 'notes' => $this->id.'-'.$this->username,
             ]);
 
@@ -139,7 +139,7 @@ trait SubscriptionTrait
             if (in_array($plan, $this->validPlans())) {
                 $subscription = \Iugu_Subscription::create([
                     'plan_identifier' => $plan,
-                    'customer_id' => $this->customer_id,
+                    'customer_id'     => $this->customer_id,
                 ]);
 
                 if ($subscription) {
@@ -176,8 +176,6 @@ trait SubscriptionTrait
 
             return $subscription;
         }
-
-        return;
     }
 
     /**

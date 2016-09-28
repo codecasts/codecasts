@@ -2,14 +2,14 @@
 
 namespace Codecasts\Domains\Users\Providers;
 
+use Codecasts\Domains\Users\Contracts;
+use Codecasts\Domains\Users\Database\Factories\UserFactory;
 use Codecasts\Domains\Users\Database\Migrations\AlterGuestsOnUsersTable;
 use Codecasts\Domains\Users\Database\Migrations\CreateOauthIdentitiesTable;
-use Codecasts\Support\Domain\ServiceProvider;
-use Codecasts\Domains\Users\Database\Factories\UserFactory;
 use Codecasts\Domains\Users\Database\Migrations\CreateUsersTable;
 use Codecasts\Domains\Users\Database\Seeders\UsersSeeder;
-use Codecasts\Domains\Users\Contracts;
 use Codecasts\Domains\Users\Repositories;
+use Codecasts\Support\Domain\ServiceProvider;
 
 /**
  * Class DomainServiceProvider.

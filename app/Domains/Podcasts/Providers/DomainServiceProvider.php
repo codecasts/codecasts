@@ -2,9 +2,9 @@
 
 namespace Codecasts\Domains\Podcasts\Providers;
 
+use Codecasts\Domains\Podcasts\Contracts\PodcastRepository as PodcastRepositoryContract;
 use Codecasts\Domains\Podcasts\Database\Migrations\AddPlayedAndDownloadTimesToLessonsTable;
 use Codecasts\Domains\Podcasts\Database\Migrations\CreatePodcastsTable;
-use Codecasts\Domains\Podcasts\Contracts\PodcastRepository as PodcastRepositoryContract;
 use Codecasts\Domains\Podcasts\Repositories\PodcastRepository;
 use Codecasts\Support\Domain\ServiceProvider;
 

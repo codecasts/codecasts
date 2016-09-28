@@ -2,8 +2,8 @@
 
 namespace Codecasts\Domains\Lessons\Transformers;
 
-use League\Fractal\TransformerAbstract;
 use Codecasts\Domains\Lessons\Track;
+use League\Fractal\TransformerAbstract;
 
 class TrackTransformer extends TransformerAbstract
 {

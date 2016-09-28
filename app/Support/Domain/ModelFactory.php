@@ -3,8 +3,8 @@
 namespace Codecasts\Support\Domain;
 
 use Faker\Generator;
-use Illuminate\Database\Eloquent\Factory;
 use Faker\Generator as Faker;
+use Illuminate\Database\Eloquent\Factory;
 use Illuminate\Database\Eloquent\Model;
 
 /**

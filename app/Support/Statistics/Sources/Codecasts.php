@@ -12,8 +12,6 @@ class Codecasts extends Source
             if ($this->versionFileExists()) {
                 return $this->getVersionFromFile();
             }
-
-            return null;
         });
     }
 

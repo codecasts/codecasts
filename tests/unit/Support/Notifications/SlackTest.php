@@ -2,8 +2,8 @@
 
 namespace Codecasts\Support\Notifications;
 
-use Mockery as m;
 use Maknz\Slack\Client as SlackClient;
+use Mockery as m;
 
 /**
  * Class SlackTest.

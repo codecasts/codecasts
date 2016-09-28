@@ -70,7 +70,7 @@ class Podcast extends Model
 
             return $manager->getDownloadUrl();
         } catch (UrlNotFound $e) {
-            return null;
+            return;
         }
     }
 
@@ -81,7 +81,7 @@ class Podcast extends Model
 
             return $manager->getStreamingUrl();
         } catch (UrlNotFound $e) {
-            return null;
+            return;
         }
     }
 
@@ -92,7 +92,7 @@ class Podcast extends Model
 
             return $manager->getThumbContent();
         } catch (UrlNotFound $e) {
-            return null;
+            return;
         }
     }
 

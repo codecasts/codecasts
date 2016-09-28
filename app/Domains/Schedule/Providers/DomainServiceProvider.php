@@ -2,8 +2,8 @@
 
 namespace Codecasts\Domains\Schedule\Providers;
 
-use Codecasts\Domains\Schedule\Database\Migrations\CreateScheduleTable;
 use Codecasts\Domains\Schedule\Contracts\ScheduleRepository as ScheduleRepositoryContract;
+use Codecasts\Domains\Schedule\Database\Migrations\CreateScheduleTable;
 use Codecasts\Domains\Schedule\Repositories\ScheduleRepository;
 use Codecasts\Support\Domain\ServiceProvider;
 

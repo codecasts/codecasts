@@ -6,8 +6,8 @@ use Carbon\Carbon;
 use Codecasts\Domains\Suggestions\Suggestion;
 use Codecasts\Domains\Users\Contracts\SocialParser;
 use Codecasts\Domains\Users\Presenters\UserPresenter;
-use Codecasts\Support\ViewPresenter\Presentable;
 use Codecasts\Support\Subscription\SubscriptionTrait;
+use Codecasts\Support\ViewPresenter\Presentable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 

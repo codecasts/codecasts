@@ -35,8 +35,8 @@ trait SearchableTrait
     {
         $results = app('elastic')->search([
             'index' => $index,
-            'type' => $this->modelClass,
-            'body' => [
+            'type'  => $this->modelClass,
+            'body'  => [
                 'query' => [
                     'query_string' => [
                         'query' => "*{$term}*",
