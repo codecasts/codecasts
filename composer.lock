@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6b2b25defa8f9dd33cde8a44f1529319",
-    "content-hash": "92faea7d69688e2c49fcf8f46c71f024",
+    "hash": "637f2bc3d82b66072e8b90879d5f7905",
+    "content-hash": "d4dea9080abc47fa82f8017b6d1b935e",
     "packages": [
         {
             "name": "adamwathan/eloquent-oauth",
@@ -65,21 +65,21 @@
         },
         {
             "name": "adamwathan/eloquent-oauth-l5",
-            "version": "v0.4.2",
+            "version": "v0.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/adamwathan/eloquent-oauth-l5.git",
-                "reference": "2606c0525b4be462a99e1a22212f7e1963a92422"
+                "reference": "f28febf4edf74eb54dba83c118273926bfca2b66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/adamwathan/eloquent-oauth-l5/zipball/2606c0525b4be462a99e1a22212f7e1963a92422",
-                "reference": "2606c0525b4be462a99e1a22212f7e1963a92422",
+                "url": "https://api.github.com/repos/adamwathan/eloquent-oauth-l5/zipball/f28febf4edf74eb54dba83c118273926bfca2b66",
+                "reference": "f28febf4edf74eb54dba83c118273926bfca2b66",
                 "shasum": ""
             },
             "require": {
-                "adamwathan/eloquent-oauth": "^8.1",
-                "guzzlehttp/guzzle": "^6.0",
+                "adamwathan/eloquent-oauth": "~8.1",
+                "guzzlehttp/guzzle": "^6.2.1",
                 "php": ">=5.5.0"
             },
             "require-dev": {
@@ -102,7 +102,7 @@
                 }
             ],
             "description": "Stupid simple OAuth authentication with Laravel and Eloquent",
-            "time": "2015-12-27 01:39:13"
+            "time": "2016-07-24 15:22:40"
         },
         {
             "name": "artesaos/migrator",
@@ -1159,16 +1159,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.3.10",
+            "version": "v5.3.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "6febb0ee61999cde3bc7b2963c8903032bb22691"
+                "reference": "ca48001b95a0543fb39fcd7219de960bbc03eaa5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/6febb0ee61999cde3bc7b2963c8903032bb22691",
-                "reference": "6febb0ee61999cde3bc7b2963c8903032bb22691",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/ca48001b95a0543fb39fcd7219de960bbc03eaa5",
+                "reference": "ca48001b95a0543fb39fcd7219de960bbc03eaa5",
                 "shasum": ""
             },
             "require": {
@@ -1283,7 +1283,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2016-09-20 13:46:16"
+            "time": "2016-09-28 02:15:37"
         },
         {
             "name": "laravelcollective/html",
