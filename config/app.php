@@ -189,10 +189,13 @@ return [
          * Package Service Providers...
          */
         Migrator\MigrationServiceProvider::class,
+        Sentry\SentryLaravel\SentryLaravelServiceProvider::class,
         Artesaos\Warehouse\WarehouseServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
         Maknz\Slack\SlackServiceProvider::class,
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+        AdamWathan\EloquentOAuthL5\EloquentOAuthServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
 
         /*
          * Support Service Providers...
