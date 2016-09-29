@@ -20,12 +20,12 @@ class UserFactory extends ModelFactory
      */
     public function fields()
     {
-        static $password;
+        $name = $this->faker->name;
 
         return [
-            'name'           => $this->faker->name,
+            'name'           => $name,
+            'username'       => str_slug($name),
             'email'          => $this->faker->safeEmail,
-            'password'       => $password ?: $password = bcrypt('secret'),
             'remember_token' => str_random(10),
         ];
     }

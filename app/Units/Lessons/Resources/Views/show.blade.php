@@ -39,16 +39,15 @@
                     <div class="panel panel-default text-justify">
                         <div class="panel-body">
                             {{ $lesson->description}}
+                            {{--
                             @if(count($lesson->tags))
-
-                                {{--
                                 @foreach($lesson->tags as $tag)
                                     <div class="label-group nerd-stat">
                                         <span class="label label-primary"><i class="fa fa-tag"></i></span><span class="label label-primary">{{ $tag->tag }}</span>
                                     </div>
                                 @endforeach
-                                --}}
                             @endif
+                            --}}
 
                         </div>
                     </div>

@@ -25,13 +25,6 @@ class SettingsController extends Controller
         $this->middleware('auth');
     }
 
-    public function support()
-    {
-        $this->seo()->setTitle('Suporte');
-
-        return $this->view('settings::support');
-    }
-
     public function profile()
     {
         $this->seo()->setTitle('Perfil');
