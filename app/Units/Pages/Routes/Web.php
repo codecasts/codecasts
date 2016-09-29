@@ -26,6 +26,5 @@ class Web extends RouteFile
 
         // Statistics
         $this->router->get('statistics', ['as' => 'statistics', 'uses' => 'PagesController@statistics']);
-
     }
 }
