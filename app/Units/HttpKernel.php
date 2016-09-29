@@ -30,6 +30,7 @@ class HttpKernel extends Kernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \Codecasts\Units\Core\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            \Codecasts\Units\Core\Http\Middleware\RedirectIfWrongUrlOrProtocol::class,
         ],
 
         'api' => [
