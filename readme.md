@@ -4,7 +4,7 @@
 [![License](https://poser.pugx.org/codecasts/codecasts/license)](https://packagist.org/packages/codecasts/codecasts)
 [![composer.lock](https://poser.pugx.org/codecasts/codecasts/composerlock)](https://packagist.org/packages/codecasts/codecasts)
 [![GitHub issues](https://img.shields.io/github/issues/codecasts/codecasts.svg)](https://github.com/codecasts/codecasts/issues)
-[![GitHub issues](https://img.shields.io/badge/DockerHub-codecasts%2Fcodecasts-blue.svg)](https://hub.docker.com/r/codecasts/codecasts)
+[![Docker Hub Image](https://img.shields.io/badge/docker-codecasts%2Fcodecasts-blue.svg)](https://hub.docker.com/r/codecasts/codecasts)
 
 
 Application's GIT Repository.
