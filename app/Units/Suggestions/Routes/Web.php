@@ -22,6 +22,5 @@ class Web extends RouteFile
 
         $this->router->get('suggestion/{id}/votes/sync', ['as' => 'suggestion.sync', 'uses' => 'VotesController@sync']);
         $this->router->get('suggestion/votes/user', ['as' => 'suggestion.votes.user', 'uses' => 'VotesController@userVotes']);
-
     }
 }

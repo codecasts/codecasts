@@ -2,13 +2,13 @@
 
 namespace Codecasts\Units\Podcasts\Http\Controllers;
 
+use Artesaos\SEOTools\Traits\SEOTools;
 use Codecasts\Domains\Podcasts\Contracts\PodcastRepository;
 use Codecasts\Domains\Podcasts\Events\PodcastDownloaded;
 use Codecasts\Domains\Podcasts\Events\PodcastPlayed;
 use Codecasts\Support\Http\Controller;
-use Illuminate\Http\Request;
 use Illuminate\Contracts\Cache\Repository as Cache;
-use Artesaos\SEOTools\Traits\SEOTools;
+use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
 class PodcastController extends Controller

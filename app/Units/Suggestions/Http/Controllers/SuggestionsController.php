@@ -37,9 +37,9 @@ class SuggestionsController extends Controller
     public function store(NewSuggestionRequest $request)
     {
         $data = [
-            'title' => $request->get('suggestion'),
-            'user_id' => $this->user->id,
-            'visible' => true,
+            'title'       => $request->get('suggestion'),
+            'user_id'     => $this->user->id,
+            'visible'     => true,
             'description' => 'not used',
         ];
 

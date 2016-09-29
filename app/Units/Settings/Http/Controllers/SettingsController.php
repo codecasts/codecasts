@@ -3,9 +3,9 @@
 namespace Codecasts\Units\Settings\Http\Controllers;
 
 use Artesaos\SEOTools\Traits\SEOTools;
-use Codecasts\Units\Settings\Http\Requests\UpdateUserRequest;
 use Codecasts\Domains\Users\Contracts\UserRepository;
 use Codecasts\Support\Http\Controller;
+use Codecasts\Units\Settings\Http\Requests\UpdateUserRequest;
 
 class SettingsController extends Controller
 {
