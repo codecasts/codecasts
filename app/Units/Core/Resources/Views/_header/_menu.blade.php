@@ -1,5 +1,6 @@
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
+
         <li class="{{ (!Request::is('lesson/track*') and Request::is('lesson*')) ? 'active':'' }}">
             <a href="{{ route('lesson.index') }}"><i class="icon-control-play"></i> {{ ucfirst(trans('core::menu.lessons')) }}</a>
         </li>
@@ -19,19 +20,21 @@
         @if($user)
 
         <li class="{{ Request::is('settings/subscription*') ? 'active':'' }}">
-            <a href="{{ route('settings.subscription.index') }}"><i class="icon-credit-card"></i> {{ ucfirst(trans('core::menu.subscription')) }}</a>
+            <a href="{{ route('subscription.index') }}"><i class="icon-credit-card"></i> {{ ucfirst(trans('core::menu.subscription')) }}</a>
         </li>
 
         @endif
+
     </ul>
     <ul class="nav navbar-nav navbar-right">
+
         @if($user)
         <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                 <img src="{{ $user->getAvatarUrl(30) }}" class="profile-image" alt="">{{ $user->username }}<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
                 <li>
-                    <a href="{{ route('settings.profile.edit') }}">
+                    <a href="{{ route('profile.edit') }}">
                         <i class="fa fa-user"></i>
                         Perfil
                     </a>
@@ -40,7 +43,7 @@
                 <li>
                     <a href="/auth/logout">
                         <i class="fa fa-sign-out"></i>
-                        &nbsp;&nbsp;{{ ucfirst(trans('menu.logout')) }}
+                        &nbsp;&nbsp;{{ ucfirst(trans('core::menu.logout')) }}
                     </a>
                 </li>
             </ul>
@@ -49,9 +52,10 @@
             <li>
                 <a href="{{ route('auth.login') }}">
                     <i class="icon-user"></i>
-                    <span >&nbsp;{{ ucfirst(trans('menu.login')) }}</span>
+                    <span >&nbsp;{{ ucfirst(trans('core::menu.login')) }}</span>
                 </a>
             </li>
         @endif
+
     </ul>
 </div>

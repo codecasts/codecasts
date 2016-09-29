@@ -1,10 +1,10 @@
 <?php
 
-namespace Codecasts\Units\Home\Providers;
+namespace Codecasts\Units\Lessons\Providers;
 
-use Codecasts\Units\Home\Routes\Api;
-use Codecasts\Units\Home\Routes\Console;
-use Codecasts\Units\Home\Routes\Web;
+use Codecasts\Units\Lessons\Routes\Api;
+use Codecasts\Units\Lessons\Routes\Console;
+use Codecasts\Units\Lessons\Routes\Web;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
 class RouteServiceProvider extends ServiceProvider
@@ -16,7 +16,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'Codecasts\Units\Home\Http\Controllers';
+    protected $namespace = 'Codecasts\Units\Lessons\Http\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -48,6 +48,7 @@ class RouteServiceProvider extends ServiceProvider
         (new Web([
             'middleware' => 'web',
             'namespace'  => $this->namespace,
+            'prefix' => ''
         ]))->register();
     }
 
@@ -61,7 +62,7 @@ class RouteServiceProvider extends ServiceProvider
         (new Api([
             'middleware' => 'api',
             'namespace'  => $this->namespace,
-            'prefix'     => 'api',
+            'prefix'     => 'api/lesson',
         ]))->register();
     }
 

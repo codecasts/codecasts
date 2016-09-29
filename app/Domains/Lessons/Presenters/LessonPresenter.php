@@ -16,6 +16,6 @@ class LessonPresenter extends Presenter
 
     public function level()
     {
-        return ucfirst(trans('lessons::lesson.level_'.$this->entity->level));
+        return ucfirst(trans('lesson::lesson.level_'.$this->entity->level));
     }
 }

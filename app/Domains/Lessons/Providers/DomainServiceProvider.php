@@ -16,7 +16,7 @@ use Codecasts\Support\Domain\ServiceProvider;
 
 class DomainServiceProvider extends ServiceProvider
 {
-    protected $alias = 'lessons';
+    protected $alias = 'lesson';
 
     protected $hasTranslations = true;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Codecasts\Units\Home\Routes;
+namespace Codecasts\Units\Lessons\Routes;
 
 use Codecasts\Support\Console\Routing\RouteFile;
 
@@ -18,8 +18,6 @@ class Console extends RouteFile
      */
     public function routes()
     {
-        $this->artisan->command('example', function () {
-            $this->info('Example Console Route!');
-        });
+        //
     }
 }

@@ -78,7 +78,7 @@ a.list-group-item {
             display: block;
         }
     }
-    .scsson-level {
+    .lesson-level {
         border-bottom: 2px solid;
     }
 }
@@ -95,7 +95,7 @@ a.list-group-item {
     border-top: 1px solid $panel-inner-border;
 }
 
-.scsson-box {
+.lesson-box {
     background-color: $gray-lighter;
     border: 2px solid $gray-lighter;
     border-radius: 3px;
@@ -131,18 +131,18 @@ a.list-group-item {
         }
     }
 
-    .scsson-pre-title {
+    .lesson-pre-title {
         height: 15px;
         vertical-align: middle;
     }
 
-    .scsson-post-title {
+    .lesson-post-title {
         height: 30px;
         vertical-align: middle;
 
     }
 
-    .scsson-level {
+    .lesson-level {
         position: relative;
         display: block;
         float: right;
@@ -150,7 +150,7 @@ a.list-group-item {
         text-transform: uppercase;
     }
 
-    .scsson-length {
+    .lesson-length {
         //position: relative;
         display: block;
         float: left;
@@ -161,7 +161,7 @@ a.list-group-item {
         //text-transform: uppercase;
     }
 
-    .scsson-date {
+    .lesson-date {
         //position: relative;
         display: block;
         float: right;
@@ -171,7 +171,7 @@ a.list-group-item {
         //text-transform: uppercase;
     }
 
-    .scsson-paid {
+    .lesson-paid {
         position: relative;
         display: block;
         float: right;
@@ -179,7 +179,7 @@ a.list-group-item {
         top: -8px;
     }
 
-    .scsson-desc {
+    .lesson-desc {
         font-weight: 400;
         font-size: 0.9em;
         color: $brand-primary;
@@ -188,7 +188,7 @@ a.list-group-item {
         height: 60px;
     }
 
-    .scsson-track {
+    .lesson-track {
         display: block;
         float: left;
         width: 100%;

@@ -220,12 +220,12 @@ return [
          */
         Codecasts\Units\Core\Providers\UnitServiceProvider::class,
         Codecasts\Units\Auth\Providers\UnitServiceProvider::class,
-        Codecasts\Units\Home\Providers\UnitServiceProvider::class,
         Codecasts\Units\Pages\Providers\UnitServiceProvider::class,
         Codecasts\Units\Settings\Providers\UnitServiceProvider::class,
         Codecasts\Units\Podcasts\Providers\UnitServiceProvider::class,
         Codecasts\Units\Suggestions\Providers\UnitServiceProvider::class,
         Codecasts\Units\Webhooks\Providers\UnitServiceProvider::class,
+        Codecasts\Units\Lessons\Providers\UnitServiceProvider::class,
 
     ],
 

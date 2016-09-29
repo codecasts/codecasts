@@ -1,6 +1,6 @@
 <?php
 
-namespace Codecasts\Units\Home\Routes;
+namespace Codecasts\Units\Lessons\Routes;
 
 use Codecasts\Support\Http\Routing\RouteFile;
 
@@ -18,8 +18,6 @@ class Api extends RouteFile
      */
     public function routes()
     {
-        $this->router->get('/user', function (Request $request) {
-            return $request->user();
-        })->middleware('auth:api');
+        $this->router->get('search', ['as' => 'lesson.search', 'uses' => 'Api\LessonController@search']);
     }
 }
