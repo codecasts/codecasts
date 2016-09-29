@@ -213,6 +213,7 @@ return [
         Codecasts\Domains\Users\Providers\DomainServiceProvider::class,
         Codecasts\Domains\Lessons\Providers\DomainServiceProvider::class,
         Codecasts\Domains\Podcasts\Providers\DomainServiceProvider::class,
+        Codecasts\Domains\Suggestions\Providers\DomainServiceProvider::class,
 
         /*
          * Units
@@ -223,6 +224,7 @@ return [
         Codecasts\Units\Pages\Providers\UnitServiceProvider::class,
         Codecasts\Units\Settings\Providers\UnitServiceProvider::class,
         Codecasts\Units\Podcasts\Providers\UnitServiceProvider::class,
+        Codecasts\Units\Suggestions\Providers\UnitServiceProvider::class,
 
     ],
 
