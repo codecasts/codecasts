@@ -31,7 +31,5 @@ class Web extends RouteFile
         $this->router->get('callback/{driver}', ['as' => 'auth.social.callback', 'uses' => 'AuthController@callback']);
 
         $this->router->get('logout', ['as' => 'auth.logout', 'uses' => 'AuthController@logout']);
-
-
     }
 }
