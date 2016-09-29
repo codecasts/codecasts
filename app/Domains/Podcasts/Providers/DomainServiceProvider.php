@@ -3,6 +3,7 @@
 namespace Codecasts\Domains\Podcasts\Providers;
 
 use Codecasts\Domains\Podcasts\Contracts\PodcastRepository as PodcastRepositoryContract;
+use Codecasts\Domains\Podcasts\Database\Factories\PodcastFactory;
 use Codecasts\Domains\Podcasts\Database\Migrations\CreatePodcastsTable;
 use Codecasts\Domains\Podcasts\Repositories\PodcastRepository;
 use Codecasts\Support\Domain\ServiceProvider;
@@ -23,5 +24,9 @@ class DomainServiceProvider extends ServiceProvider
 
     protected $subProviders = [
         EventServiceProvider::class,
+    ];
+
+    protected $factories = [
+        PodcastFactory::class,
     ];
 }

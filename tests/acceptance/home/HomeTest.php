@@ -1,16 +1,17 @@
 <?php
 
+use Codecasts\Support\Testing\DatabaseMigrations;
 
-class ExampleTest extends TestCase
+class HomeTest extends TestCase
 {
-    use \Codecasts\Traits\DatabaseMigrations;
+    use DatabaseMigrations;
 
     /**
      * A basic functional test example.
      *
      * @return void
      */
-    public function testBasicExample()
+    public function test_home_redirect_to_lessons()
     {
         $this->runDatabaseMigrations();
 

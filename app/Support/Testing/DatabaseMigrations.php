@@ -1,8 +1,8 @@
 <?php
 
-namespace Codecasts\Traits;
-use Illuminate\Contracts\Console\Kernel;
+namespace Codecasts\Support\Testing;
 
+use Illuminate\Contracts\Console\Kernel;
 
 /**
  * Trait DatabaseMigrations.
