@@ -8,10 +8,6 @@ sudo: required
 services:
   - docker
 
-# login on docker hub
-before_install:
-  - docker login -u "$DOCKER_USER" -p "$DOCKER_PASSWORD"
-
 # build this code into a docker image
 install:
   - docker build -t $DOCKER_REPO:$TRAVIS_BRANCH .
@@ -22,6 +18,7 @@ script:
 
 # if tests passes, push the docker image
 after_success:
+  - docker login -u "$DOCKER_USER" -p "$DOCKER_PASSWORD"
   - docker push $DOCKER_REPO:$TRAVIS_BRANCH
 
 # notify slack about it
