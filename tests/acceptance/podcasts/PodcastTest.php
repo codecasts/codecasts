@@ -55,4 +55,18 @@ class PodcastTest extends TestCase
             ->dontSee('podcast 2 title');
 
     }
+
+    public function test_podcast_can_be_found_by_slug()
+    {
+        $this->runDatabaseMigrations();
+
+        factory(\Codecasts\Domains\Podcasts\Podcast::class)->create([
+            'title' => 'podcast 1 title',
+            'slug' => 'podcast-1-title',
+            'visible' => true,
+        ]);
+
+        $this->visit(route('podcast.show', ['podcast-1-title']))
+            ->see('podcast 1 title');
+    }
 }
