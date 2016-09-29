@@ -19,7 +19,6 @@ class LessonTest extends TestCase
              ->see('Aulas');
     }
 
-
     public function test_podcasts_are_being_listed()
     {
         $this->runDatabaseMigrations();
@@ -38,7 +37,6 @@ class LessonTest extends TestCase
             ->see('lesson 2 title');
     }
 
-
     public function test_lessons_can_be_hidden()
     {
         $this->runDatabaseMigrations();
@@ -56,7 +54,6 @@ class LessonTest extends TestCase
             ->see('lesson 1 title')
             ->dontSee('lesson 2 title');
     }
-
 
     public function test_lessons_can_be_found_by_slug()
     {

@@ -16,9 +16,9 @@ class ProfileTest extends TestCase
         $this->runDatabaseMigrations();
 
         $user = factory(\Codecasts\Domains\Users\User::class)->create([
-            'name' => 'John Doe',
+            'name'     => 'John Doe',
             'username' => 'john_doe',
-            'email' => 'john@doe.com',
+            'email'    => 'john@doe.com',
         ]);
 
         $this->be($user);
