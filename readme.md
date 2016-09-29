@@ -3,6 +3,8 @@
 Application's GIT Repository.
 This document should be the ultimate guide on running and specs about the application source code.
 
+[![Latest Stable Version](https://poser.pugx.org/codecasts/codecasts/v/stable)](https://packagist.org/packages/codecasts/codecasts) [![License](https://poser.pugx.org/codecasts/codecasts/license)](https://packagist.org/packages/codecasts/codecasts) [![composer.lock](https://poser.pugx.org/codecasts/codecasts/composerlock)](https://packagist.org/packages/codecasts/codecasts)
+
 ## Build status
 
 | Branch        | Environment      | URL                                                                                 | Status                                                                                                                                     | Test Coverage                                                                                                                      | Code Style                                                                                                |
