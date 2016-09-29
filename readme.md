@@ -1,5 +1,6 @@
 # CODECASTS
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4593ea49c9404184acd0a3370c45b37d)](https://www.codacy.com/app/CODECASTS/codecasts?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=codecasts/codecasts&amp;utm_campaign=Badge_Grade)
 [![Latest Stable Version](https://poser.pugx.org/codecasts/codecasts/v/stable)](https://packagist.org/packages/codecasts/codecasts)
 [![License](https://poser.pugx.org/codecasts/codecasts/license)](https://packagist.org/packages/codecasts/codecasts)
 [![composer.lock](https://poser.pugx.org/codecasts/codecasts/composerlock)](https://packagist.org/packages/codecasts/codecasts)
