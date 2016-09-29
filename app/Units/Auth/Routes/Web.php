@@ -20,33 +20,18 @@ class Web extends RouteFile
     {
         // Authentication routes.
         $this->authenticationRoutes();
-
-        // Registration routes.
-        $this->registrationRoutes();
-
-        // Password Reset routes.
-        $this->passwordResetRoutes();
     }
 
     protected function authenticationRoutes()
     {
-        $this->router->get('login', 'LoginController@showLoginForm')
-            ->name('login');
-        $this->router->post('login', 'LoginController@login');
-        $this->router->post('logout', 'LoginController@logout');
-    }
+        $this->router->get('login/{driver}', ['as' => 'auth.social.login', 'uses' => 'AuthController@social']);
 
-    protected function registrationRoutes()
-    {
-        $this->router->get('register', 'RegisterController@showRegistrationForm');
-        $this->router->post('register', 'RegisterController@register');
-    }
+        $this->router->get('login', ['as' => 'auth.login', 'uses' => 'AuthController@login']);
 
-    protected function passwordResetRoutes()
-    {
-        $this->router->get('password/reset', 'ForgotPasswordController@showLinkRequestForm');
-        $this->router->post('password/email', 'ForgotPasswordController@sendResetLinkEmail');
-        $this->router->get('password/reset/{token}', 'ResetPasswordController@showResetForm');
-        $this->router->post('password/reset', 'ResetPasswordController@reset');
+        $this->router->get('callback/{driver}', ['as' => 'auth.social.callback', 'uses' => 'AuthController@callback']);
+
+        $this->router->get('logout', ['as' => 'auth.logout', 'uses' => 'AuthController@logout']);
+
+
     }
 }
