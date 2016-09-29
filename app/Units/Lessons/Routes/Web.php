@@ -32,7 +32,7 @@ class Web extends RouteFile
     protected function lessonRoutes()
     {
         // Main Redirect
-        $this->router->get('', function() {
+        $this->router->get('', function () {
             return redirect(route('lesson.index'));
         });
 
@@ -42,6 +42,5 @@ class Web extends RouteFile
         $this->router->get('lesson/play/{id}', ['as' => 'lesson.play', 'uses' => 'LessonController@play']);
         $this->router->get('lesson/download/{id}', ['as' => 'lesson.download', 'uses' => 'LessonController@download']);
         $this->router->get('lesson/thumb/{id}', ['as' => 'lesson.thumb', 'uses' => 'LessonController@thumb']);
-
     }
 }
