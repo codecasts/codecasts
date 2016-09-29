@@ -15,7 +15,7 @@ class Disqus
      */
     public static function display($id, $title)
     {
-        return view('disqus', [
+        return view('core::disqus', [
             'disqus_id'    => $id,
             'disqus_title' => $title,
         ]);
