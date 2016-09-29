@@ -12,8 +12,8 @@ class UpdateUserRequest extends Request
 
         return [
             'username' => "required|unique:users,username,{$userId}",
-            'name' => 'required',
-            'email' => 'required|email',
+            'name'     => 'required',
+            'email'    => 'required|email',
         ];
     }
 }

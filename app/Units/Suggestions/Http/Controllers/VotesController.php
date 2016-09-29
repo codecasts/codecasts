@@ -19,6 +19,7 @@ class VotesController extends Controller
 
         $this->repository = $repository;
     }
+
     /**
      * @param $id
      *
@@ -37,8 +38,8 @@ class VotesController extends Controller
 
         return [
             'suggestion_id' => $suggestion->id,
-            'action' => ($has) ? 'detach' : 'attach',
-            'count' => $suggestion->votes()->count(),
+            'action'        => ($has) ? 'detach' : 'attach',
+            'count'         => $suggestion->votes()->count(),
         ];
     }
 
