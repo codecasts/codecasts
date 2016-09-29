@@ -2,11 +2,11 @@
 
 namespace Codecasts\Units\Lessons\Http\Controllers;
 
+use Artesaos\SEOTools\Traits\SEOTools;
 use Codecasts\Domains\Lessons\Contracts\TrackRepository;
 use Codecasts\Support\Http\Controller;
-use Illuminate\Http\Request;
 use Illuminate\Contracts\Cache\Repository as Cache;
-use Artesaos\SEOTools\Traits\SEOTools;
+use Illuminate\Http\Request;
 
 class TrackController extends Controller
 {

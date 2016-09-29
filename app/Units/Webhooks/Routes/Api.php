@@ -19,8 +19,8 @@ class Api extends RouteFile
     public function routes()
     {
         $this->router->post('iugu', [
-            'as' => 'api.webhooks.iugu',
-            'uses' => 'IuguController@receive'
+            'as'   => 'api.webhooks.iugu',
+            'uses' => 'IuguController@receive',
         ]);
     }
 }
