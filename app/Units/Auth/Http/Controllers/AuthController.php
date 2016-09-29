@@ -4,10 +4,10 @@ namespace Codecasts\Units\Auth\Http\Controllers;
 
 use Artesaos\SEOTools\Traits\SEOTools;
 use Codecasts\Domains\Users\Parsers\ParserResolver;
+use Codecasts\Domains\Users\User;
 use Codecasts\Support\Http\Controller;
 use Illuminate\Contracts\Auth\Guard;
 use SocialNorm\Exceptions\ApplicationRejectedException;
-use Codecasts\Domains\Users\User;
 
 /**
  * Class AuthController.
