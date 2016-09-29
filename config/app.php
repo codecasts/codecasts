@@ -222,6 +222,7 @@ return [
         Codecasts\Units\Home\Providers\UnitServiceProvider::class,
         Codecasts\Units\Pages\Providers\UnitServiceProvider::class,
         Codecasts\Units\Settings\Providers\UnitServiceProvider::class,
+        Codecasts\Units\Podcasts\Providers\UnitServiceProvider::class,
 
     ],
 

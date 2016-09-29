@@ -55,11 +55,12 @@ return [
         ],
 
         's3' => [
-            'driver' => 's3',
-            'key'    => 'your-key',
-            'secret' => 'your-secret',
-            'region' => 'your-region',
-            'bucket' => 'your-bucket',
+            'driver'   => 's3',
+            'key'      => env('AWS_KEY'),
+            'secret'   => env('AWS_SECRET'),
+            'region'   => env('AWS_REGION'),
+            'bucket'   => env('S3_BUCKET'),
+            'endpoint' => env('AWS_ENDPOINT'),
         ],
 
     ],
