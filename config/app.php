@@ -220,6 +220,8 @@ return [
         Codecasts\Units\Core\Providers\UnitServiceProvider::class,
         Codecasts\Units\Auth\Providers\UnitServiceProvider::class,
         Codecasts\Units\Home\Providers\UnitServiceProvider::class,
+        Codecasts\Units\Pages\Providers\UnitServiceProvider::class,
+        Codecasts\Units\Settings\Providers\UnitServiceProvider::class,
 
     ],
 
