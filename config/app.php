@@ -196,6 +196,7 @@ return [
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
         AdamWathan\EloquentOAuthL5\EloquentOAuthServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        Codecasts\Support\Subscription\SubscriptionServiceProvider::class,
 
         /*
          * Support Service Providers...
