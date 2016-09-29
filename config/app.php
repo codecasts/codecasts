@@ -225,6 +225,7 @@ return [
         Codecasts\Units\Settings\Providers\UnitServiceProvider::class,
         Codecasts\Units\Podcasts\Providers\UnitServiceProvider::class,
         Codecasts\Units\Suggestions\Providers\UnitServiceProvider::class,
+        Codecasts\Units\Webhooks\Providers\UnitServiceProvider::class,
 
     ],
 
