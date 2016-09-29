@@ -23,6 +23,8 @@ class CreatePodcastsTable extends Migration
             $table->boolean('published')->default(false);
             $table->boolean('visible')->default(false);
             $table->timestamp('published_at')->nullable();
+            $table->unsignedInteger('times_downloaded')->default(0);
+            $table->unsignedInteger('times_played')->default(0);
             $table->softDeletes();
             $table->timestamps();
         });

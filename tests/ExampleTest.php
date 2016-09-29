@@ -3,6 +3,8 @@
 
 class ExampleTest extends TestCase
 {
+    use \Codecasts\Traits\DatabaseMigrations;
+
     /**
      * A basic functional test example.
      *
@@ -10,7 +12,9 @@ class ExampleTest extends TestCase
      */
     public function testBasicExample()
     {
+        $this->runDatabaseMigrations();
+
         $this->visit('/')
-             ->see('Laravel');
+             ->see('Aulas');
     }
 }

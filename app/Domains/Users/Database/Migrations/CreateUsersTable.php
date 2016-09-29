@@ -29,6 +29,7 @@ class CreateUsersTable extends Migration
             $table->boolean('admin')->default(false);
             $table->boolean('guest')->default(false);
             $table->text('link')->nullable();
+            $table->date('guest_until')->nullable();
             $table->rememberToken();
             $table->softDeletes();
             $table->timestamps();

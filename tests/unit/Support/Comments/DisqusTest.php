@@ -15,7 +15,7 @@ class DisqusTest extends \TestCase
         $viewFactory = m::mock(Factory::class)
             ->shouldReceive('make')
             ->once()
-            ->with('disqus', ['disqus_id' => 1, 'disqus_title' => 'foo'], [])
+            ->with('core::disqus', ['disqus_id' => 1, 'disqus_title' => 'foo'], [])
             ->getMock();
 
         $this->app->instance(Factory::class, $viewFactory);

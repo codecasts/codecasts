@@ -14,6 +14,7 @@ class CreateLessonsTable extends Migration
     {
         $this->schema->create('lessons', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('author_id')->nullable();
             $table->string('slug', 150)->unique()->index();
             $table->string('title');
             $table->text('description')->nullable();
@@ -25,6 +26,8 @@ class CreateLessonsTable extends Migration
             $table->boolean('paid')->default(true);
             $table->integer('track_id', false, true)->nullable()->index();
             $table->timestamp('published_at')->nullable();
+            $table->unsignedInteger('times_downloaded')->default(0);
+            $table->unsignedInteger('times_played')->default(0);
             $table->softDeletes();
             $table->timestamps();
         });
