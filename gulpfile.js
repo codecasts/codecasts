@@ -14,6 +14,14 @@ require('laravel-elixir-vue');
  */
 
 elixir(mix => {
-    mix.sass('app.scss')
-       .webpack('app.js');
+    // Application Styles
+    mix.sass('app.scss');
+
+    // Application Scripts
+    mix.webpack('app.js');
+
+    // Vendor Scripts (Outside Webpack)
+    mix.scripts([
+        'afterglow.min.js'
+    ], 'public/js/vendor.js');
 });
