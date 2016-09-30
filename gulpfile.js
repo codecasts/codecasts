@@ -31,4 +31,7 @@ elixir(mix => {
         'js/app.js',
         'js/vendor.js',
     ]);
+
+    // Copy Images
+    mix.copy('resources/assets/img', 'public/img');
 });
