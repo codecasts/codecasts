@@ -21,8 +21,9 @@ class Indexer
 
     /**
      * Indexer constructor.
+     *
      * @param Collection $items
-     * @param string $type
+     * @param string     $type
      */
     public function __construct(Collection $items, $type)
     {
@@ -35,14 +36,14 @@ class Indexer
     {
         $elastic = app('elastic');
 
-        $this->items->each(function($item) use ($elastic) {
+        $this->items->each(function ($item) use ($elastic) {
             $item->track_title = $item->track ? $item->track->title : '';
 
             $elastic->index([
                 'index' => 'codecasts',
-                'type' => $this->type,
-                'id' => $item->id,
-                'body' => $item->toArray(),
+                'type'  => $this->type,
+                'id'    => $item->id,
+                'body'  => $item->toArray(),
             ]);
         });
     }
