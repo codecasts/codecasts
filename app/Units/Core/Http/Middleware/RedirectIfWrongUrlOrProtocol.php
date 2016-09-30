@@ -35,15 +35,7 @@ class RedirectIfWrongUrlOrProtocol
 
     protected function getDomain()
     {
-        $root = $this->request->root();
-
-        if (str_contains($root, 'http://')) {
-            return str_replace('http://', '', $root);
-        } elseif (str_contains($root, 'https://')) {
-            return str_replace('https://', '', $root);
-        }
-
-        return $root;
+        return preg_replace('/^http(s)?:\/\//', null, $this->request->root());
     }
 
     protected function redirect()
