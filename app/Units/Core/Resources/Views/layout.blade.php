@@ -28,6 +28,14 @@
 
     {!! app('seotools')->generate() !!}
 
+    <!-- Token for JS -->
+    <script>
+        window.Laravel = {!!   json_encode([
+                'csrfToken' => csrf_token(),
+            ])
+        !!}
+    </script>
+
     <link rel="stylesheet" href="{{ elixir('css/app.css') }}">
 </head>
 <body>
