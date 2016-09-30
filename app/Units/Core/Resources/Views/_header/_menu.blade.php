@@ -35,15 +35,15 @@
             <ul class="dropdown-menu" role="menu">
                 <li>
                     <a href="{{ route('profile.edit') }}">
-                        <i class="fa fa-user"></i>
+                        <i class="fa fa-fw fa-user"></i>
                         Perfil
                     </a>
                 </li>
                 <li class="divider"></li>
                 <li>
                     <a href="/auth/logout">
-                        <i class="fa fa-sign-out"></i>
-                        &nbsp;&nbsp;{{ ucfirst(trans('core::menu.logout')) }}
+                        <i class="fa fa-fw fa-sign-out"></i>
+                        {{ ucfirst(trans('core::menu.logout')) }}
                     </a>
                 </li>
             </ul>
