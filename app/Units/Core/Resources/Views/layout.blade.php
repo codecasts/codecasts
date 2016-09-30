@@ -85,7 +85,7 @@
                                     <li><a href="{{ route('support') }}"><i class="icon-support"></i> Suporte</a></li>
                                     <li><a href="{{ route('statistics') }}"><i class="icon-plane"></i> Estatísticas</a></li>
                                     @if($user && $user->admin)
-                                        <li><a href="{{-- route('panel.dashboard') --}}"><i class="icon-lock"></i> Administração</a></li>
+                                        <li><a href="{{ route('panel.dashboard') }}"><i class="icon-lock"></i> Administração</a></li>
                                     @endif
                                 </ul>
                             </div>
@@ -114,7 +114,6 @@
 
 <script src="{{ elixir('js/vendor.js') }}"></script>
 <script src="{{ elixir('js/app.js') }}"></script>
-<script src="{{-- elixir('js/vue.js') --}}"></script>
 @include('core::_sentry')
 @include('core::_analytics')
 @include('core::_crisp')
