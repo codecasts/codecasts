@@ -9,7 +9,6 @@ use Codecasts\Support\Statistics\Sources\Laravel;
 use Codecasts\Support\Statistics\Sources\Lessons;
 use Codecasts\Support\Statistics\Sources\PHP;
 use Codecasts\Support\Statistics\Sources\Users;
-use Codecasts\Support\StatisticsService;
 
 class DashboardController extends Controller
 {

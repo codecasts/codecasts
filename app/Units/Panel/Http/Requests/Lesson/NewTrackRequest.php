@@ -9,9 +9,9 @@ class NewTrackRequest extends Request
     public function rules()
     {
         return [
-            'title' =>  'required',
-            'description'   =>  'required',
-            'visible'   =>  'required',
+            'title'         => 'required',
+            'description'   => 'required',
+            'visible'       => 'required',
         ];
     }
 }

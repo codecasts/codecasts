@@ -10,6 +10,7 @@ class Admin
     /**
      * @param $request
      * @param Closure $next
+     *
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function handle($request, Closure $next)
