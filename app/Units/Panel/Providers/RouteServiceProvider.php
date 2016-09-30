@@ -48,7 +48,7 @@ class RouteServiceProvider extends ServiceProvider
         (new Web([
             'middleware' => ['web', 'auth', 'admin'],
             'namespace'  => $this->namespace,
-            'prefix' => 'panel',
+            'prefix'     => 'panel',
         ]))->register();
     }
 

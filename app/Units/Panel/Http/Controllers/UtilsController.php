@@ -20,7 +20,7 @@ class UtilsController extends Controller
 
         // reindex search entries on elastic search
         $result .= exec("cd {$basePath}; php artisan lessons:index");
-        
+
         return $this->view('panel::cache')->with(compact('result'));
     }
 }

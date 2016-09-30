@@ -3,10 +3,10 @@
 namespace Codecasts\Units\Panel\Http\Controllers\Lesson;
 
 use Artesaos\SEOTools\Traits\SEOTools;
+use Codecasts\Domains\Lessons\Contracts\TrackRepository;
 use Codecasts\Support\Http\Controller;
 use Codecasts\Units\Panel\Http\Requests\Lesson\NewTrackRequest;
 use Codecasts\Units\Panel\Http\Requests\Lesson\UpdateTrackRequest;
-use Codecasts\Domains\Lessons\Contracts\TrackRepository;
 
 class TrackController extends Controller
 {
@@ -39,7 +39,7 @@ class TrackController extends Controller
 
         return $this->view('panel::lesson.track.create');
     }
-    
+
     public function store(NewTrackRequest $request)
     {
         $data = $request->all();
@@ -82,13 +82,13 @@ class TrackController extends Controller
 
         return redirect(route('panel.lesson.track.index'));
     }
-    
+
     public function destroy($id)
     {
         $track = $this->repository->findByID($id);
 
         if ($track) {
-            foreach($track->lessons as $lesson) {
+            foreach ($track->lessons as $lesson) {
                 $lesson->track_id = null;
                 $lesson->save();
             }

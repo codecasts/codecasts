@@ -3,12 +3,12 @@
 namespace Codecasts\Units\Panel\Http\Controllers\Lesson;
 
 use Artesaos\SEOTools\Traits\SEOTools;
-use Codecasts\Units\Panel\Http\Requests\Lesson\NewLessonRequest;
-use Codecasts\Units\Panel\Http\Requests\Lesson\UpdateLessonRequest;
 use Codecasts\Domains\Lessons\Contracts\LessonRepository;
 use Codecasts\Domains\Lessons\Contracts\TrackRepository;
 use Codecasts\Domains\Users\Contracts\UserRepository;
 use Codecasts\Support\Http\Controller;
+use Codecasts\Units\Panel\Http\Requests\Lesson\NewLessonRequest;
+use Codecasts\Units\Panel\Http\Requests\Lesson\UpdateLessonRequest;
 
 class LessonController extends Controller
 {
@@ -42,10 +42,10 @@ class LessonController extends Controller
         $users = $userRepository->getAdmins();
 
         $tracks = $trackRepository->getAll(false, false);
-        
+
         return $this->view('panel::lesson.create')->with(compact('users', 'tracks'));
     }
-    
+
     public function store(NewLessonRequest $request)
     {
         $data = $request->all();
@@ -78,7 +78,6 @@ class LessonController extends Controller
         $lesson = $this->repository->findByID($id);
 
         if ($lesson) {
-
             $users = $userRepository->getAdmins();
 
             $tracks = $trackRepository->getAll(false, false);
@@ -99,7 +98,7 @@ class LessonController extends Controller
 
         return redirect(route('panel.lesson.index'));
     }
-    
+
     public function destroy($id)
     {
         $lesson = $this->repository->findByID($id);

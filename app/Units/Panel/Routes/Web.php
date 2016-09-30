@@ -22,6 +22,5 @@ class Web extends RouteFile
         $this->router->get('dashboard', ['as' => 'panel.dashboard', 'uses' => 'DashboardController@dashboard']);
         $this->router->resource('lesson/track', 'Lesson\TrackController', ['as' => 'panel.lesson']);
         $this->router->resource('lesson', 'Lesson\LessonController', ['as' => 'panel']);
-
     }
 }
