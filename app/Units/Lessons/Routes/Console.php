@@ -3,7 +3,6 @@
 namespace Codecasts\Units\Lessons\Routes;
 
 use Codecasts\Domains\Lessons\Contracts\LessonRepository;
-use Codecasts\Domains\Lessons\Contracts\TrackRepository;
 use Codecasts\Domains\Lessons\Lesson;
 use Codecasts\Support\Console\Routing\RouteFile;
 use Codecasts\Support\ElasticSearch\Indexer;
@@ -22,7 +21,7 @@ class Console extends RouteFile
      */
     public function routes()
     {
-        $this->artisan->command('lessons:index', function() {
+        $this->artisan->command('lessons:index', function () {
             // Inform what is going one
             $this->info('Indexing Lessons');
 
