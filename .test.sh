@@ -7,4 +7,6 @@ set -e
 phpdbg -qrr ./vendor/bin/phpunit --colors=never --coverage-text
 
 # Send Coverage Reports
-test $TRAVIS_PULL_REQUEST == false && bash <(curl -s https://codecov.io/bash) -f coverage.xml -C$TRAVIS_COMMIT -B$TRAVIS_BRANCH -b$TRAVIS_BUILD_NUMBER -t$CODECOV_TOKEN
+if [ $TRAVIS_PULL_REQUEST == false ]; then
+    bash <(curl -s https://codecov.io/bash) -f coverage.xml -C$TRAVIS_COMMIT -B$TRAVIS_BRANCH -b$TRAVIS_BUILD_NUMBER -t$CODECOV_TOKEN
+fi
