@@ -33,14 +33,14 @@ class Track extends Model
 
     public function firstLessonSlug()
     {
-        $lesson = $this->lessons()->first();
+        $lesson = $this->lessons->first();
 
-        return ($lesson) ? $lesson->slug : null;
+        return $lesson->slug ?? null;
     }
 
     public function lessonCount()
     {
-        $lessons_count = $this->lessons()->count();
+        $lessons_count = $this->lessons->count();
 
         return $lessons_count;
     }
