@@ -10,10 +10,9 @@ services:
 
 # cusomize Travis Branch to avoid invalid Docker tags
 before_install:
-  - echo $TRAVIS_BRANCH
+  - DOCKER_REPO=codecasts/codecasts
   - DOCKER_TAG=$(echo "$TRAVIS_BRANCH" | iconv -t ascii//TRANSLIT | sed -r s/[^a-zA-Z0-9]+/-/g | sed -r s/^-+\|-+$//g | tr A-Z a-z)
-  - echo $DOCKER_TAG
-  
+
 # build this code into a docker image
 install:
   - docker build -t $DOCKER_REPO:$DOCKER_TAG .
@@ -24,8 +23,8 @@ script:
 
 # if tests passes, push the docker image
 after_success:
-  - docker login -u "$DOCKER_USER" -p "$DOCKER_PASSWORD"
-  - docker push $DOCKER_REPO:$DOCKER_TAG
+  - [ TRAVIS_PULL_REQUEST == false ] && docker login -u "$DOCKER_USER" -p "$DOCKER_PASSWORD"
+  - [ TRAVIS_PULL_REQUEST == false ] && docker push $DOCKER_REPO:$DOCKER_TAG
 
 # notify slack about it
 notifications:
