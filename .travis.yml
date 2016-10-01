@@ -10,8 +10,10 @@ services:
 
 # cusomize Travis Branch to avoid invalid Docker tags
 before_install:
+  - echo $TRAVIS_BRANCH
   - DOCKER_TAG=$(echo "$TRAVIS_BRANCH" | iconv -t ascii//TRANSLIT | sed -r s/[^a-zA-Z0-9]+/-/g | sed -r s/^-+\|-+$//g | tr A-Z a-z)
-
+  - echo $DOCKER_TAG
+  
 # build this code into a docker image
 install:
   - docker build -t $DOCKER_REPO:$DOCKER_TAG .
