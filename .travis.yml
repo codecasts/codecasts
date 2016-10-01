@@ -23,8 +23,8 @@ script:
 
 # if tests passes, push the docker image
 after_success:
-  - [ TRAVIS_PULL_REQUEST == false ] && docker login -u "$DOCKER_USER" -p "$DOCKER_PASSWORD"
-  - [ TRAVIS_PULL_REQUEST == false ] && docker push $DOCKER_REPO:$DOCKER_TAG
+  - [ $TRAVIS_PULL_REQUEST == false ] && docker login -u "$DOCKER_USER" -p "$DOCKER_PASSWORD"
+  - [ $TRAVIS_PULL_REQUEST == false ] && docker push $DOCKER_REPO:$DOCKER_TAG
 
 # notify slack about it
 notifications:
