@@ -17,10 +17,10 @@ class TrackFactory extends ModelFactory
         $title = $this->faker->sentence(4);
 
         return [
-            'slug' => str_slug($title),
-            'title' => $title,
+            'slug'        => str_slug($title),
+            'title'       => $title,
             'description' => $this->faker->sentence(10),
-            'visible' => $this->faker->boolean(50),
+            'visible'     => $this->faker->boolean(50),
         ];
     }
 }
