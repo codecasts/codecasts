@@ -5,6 +5,7 @@ namespace Codecasts\Domains\Lessons\Providers;
 use Codecasts\Domains\Lessons\Contracts\LessonRepository as LessonRepositoryContract;
 use Codecasts\Domains\Lessons\Contracts\TrackRepository as TrackRepositoryContract;
 use Codecasts\Domains\Lessons\Database\Factories\LessonFactory;
+use Codecasts\Domains\Lessons\Database\Factories\TrackFactory;
 use Codecasts\Domains\Lessons\Database\Migrations\CreateLessonLogsTable;
 use Codecasts\Domains\Lessons\Database\Migrations\CreateLessonsTable;
 use Codecasts\Domains\Lessons\Database\Migrations\CreateLessonsTagsTable;
@@ -28,7 +29,7 @@ class DomainServiceProvider extends ServiceProvider
 
     protected $bindings = [
         LessonRepositoryContract::class => LessonRepository::class,
-        TrackRepositoryContract::class  => TrackRepository::class,
+        TrackRepositoryContract::class => TrackRepository::class,
     ];
 
     protected $subProviders = [
@@ -37,5 +38,6 @@ class DomainServiceProvider extends ServiceProvider
 
     protected $factories = [
         LessonFactory::class,
+        TrackFactory::class,
     ];
 }

@@ -30,6 +30,7 @@ class HttpKernel extends Kernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \Codecasts\Units\Core\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            \Codecasts\Units\Core\Http\Middleware\RedirectIfWrongUrlOrProtocol::class,
         ],
 
         'api' => [
@@ -46,6 +47,7 @@ class HttpKernel extends Kernel
      * @var array
      */
     protected $routeMiddleware = [
+        'admin'      => \Codecasts\Units\Panel\Http\Middleware\Admin::class,
         'auth'       => \Illuminate\Auth\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'bindings'   => \Illuminate\Routing\Middleware\SubstituteBindings::class,

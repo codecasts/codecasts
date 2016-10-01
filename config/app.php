@@ -202,10 +202,8 @@ return [
          * Support Service Providers...
          */
         Codecasts\Support\ElasticSearch\Providers\ElasticSearchServiceProvider::class,
-
-        /*
-         * Application Service Providers...
-         */
+        Codecasts\Support\Localization\LocalizationServiceProvider::class,
+        Codecasts\Support\Helpers\Blade\ExtensionsServiceProvider::class,
 
         /*
          * Domains
@@ -226,6 +224,7 @@ return [
         Codecasts\Units\Suggestions\Providers\UnitServiceProvider::class,
         Codecasts\Units\Webhooks\Providers\UnitServiceProvider::class,
         Codecasts\Units\Lessons\Providers\UnitServiceProvider::class,
+        Codecasts\Units\Panel\Providers\UnitServiceProvider::class,
 
     ],
 

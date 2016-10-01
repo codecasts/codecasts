@@ -8,7 +8,7 @@ use Illuminate\Database\Seeder;
 /**
  * Class UsersSeeders.
  */
-class UserSeeder extends Seeder
+class UsersSeeder extends Seeder
 {
     /**
      * @todo improve users seeders

@@ -13,6 +13,10 @@
     "laravel-elixir-webpack-official": "^1.0.2",
     "lodash": "^4.14.0",
     "vue": "^1.0.26",
-    "vue-resource": "^0.9.3"
+    "vue-resource": "^0.9.3",
+    "vue-typeahead": "^2.2.1"
+  },
+  "dependencies": {
+    "raven-js": "^3.7.0"
   }
 }

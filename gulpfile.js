@@ -24,4 +24,14 @@ elixir(mix => {
     mix.scripts([
         'afterglow.min.js'
     ], 'public/js/vendor.js');
+
+    // version (hash) asset files
+    mix.version([
+        'css/app.css',
+        'js/app.js',
+        'js/vendor.js',
+    ]);
+
+    // Copy Images
+    mix.copy('resources/assets/img', 'public/img');
 });

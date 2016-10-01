@@ -8,21 +8,23 @@ sudo: required
 services:
   - docker
 
-# login on docker hub
+# cusomize Travis Branch to avoid invalid Docker tags
 before_install:
-  - docker login -u "$DOCKER_USER" -p "$DOCKER_PASSWORD"
+  - DOCKER_REPO="codecasts/codecasts"
+  - DOCKER_TAG=$(echo "$TRAVIS_BRANCH" | iconv -t ascii//TRANSLIT | sed -r s/[^a-zA-Z0-9]+/-/g | sed -r s/^-+\|-+$//g | tr A-Z a-z)
 
 # build this code into a docker image
 install:
-  - docker build -t $DOCKER_REPO:$TRAVIS_BRANCH .
+  - docker build -t $DOCKER_REPO:$DOCKER_TAG .
 
 # run unit tests
 script:
-  - docker run -it -e TRAVIS_COMMIT=$TRAVIS_COMMIT -e TRAVIS_BRANCH=$TRAVIS_BRANCH -e TRAVIS_BUILD_NUMBER=$TRAVIS_BUILD_NUMBER -e CODECOV_TOKEN=$CODECOV_TOKEN $DOCKER_REPO:$TRAVIS_BRANCH bash .test.sh
+  - docker run -it -e TRAVIS_COMMIT=$TRAVIS_COMMIT -e TRAVIS_BRANCH=$TRAVIS_BRANCH -e TRAVIS_BUILD_NUMBER=$TRAVIS_BUILD_NUMBER -e CODECOV_TOKEN=$CODECOV_TOKEN $DOCKER_REPO:$DOCKER_TAG bash .test.sh
 
 # if tests passes, push the docker image
 after_success:
-  - docker push $DOCKER_REPO:$TRAVIS_BRANCH
+  - test $TRAVIS_PULL_REQUEST == false && docker login -u "$DOCKER_USER" -p "$DOCKER_PASSWORD"
+  - test $TRAVIS_PULL_REQUEST == false && docker push $DOCKER_REPO:$DOCKER_TAG
 
 # notify slack about it
 notifications:
