@@ -62,17 +62,17 @@ class User extends Authenticatable
      */
     public function getAvatarUrl($size = 30)
     {
-        $size_query = '?s=' . $size;
+        $size_query = '?s='.$size;
 
         if (!isset($this->avatar)) {
-            return '//www.gravatar.com/avatar/' . md5($this->email) . $size_query . '&d=identicon';
+            return '//www.gravatar.com/avatar/'.md5($this->email).$size_query.'&d=identicon';
         }
 
         if (str_contains($this->avatar, '?')) {
-            $size_query = '&s=' . $size;
+            $size_query = '&s='.$size;
         }
 
-        return $this->avatar . $size_query;
+        return $this->avatar.$size_query;
     }
 
     /**

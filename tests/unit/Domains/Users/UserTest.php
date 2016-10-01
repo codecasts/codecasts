@@ -2,11 +2,8 @@
 
 namespace Codecasts\Domains\Users;
 
-use Codecasts\Domains\Users\User;
-
 class UserTest extends \TestCase
 {
-
     /** @test */
     public function it_returns_the_correct_avatar_if_the_user_has_an_avatar()
     {
@@ -26,7 +23,7 @@ class UserTest extends \TestCase
     {
         $user = factory(User::class)->make();
 
-        $expected_url = '//www.gravatar.com/avatar/' . md5($user->email) . '?s=30&d=identicon';
+        $expected_url = '//www.gravatar.com/avatar/'.md5($user->email).'?s=30&d=identicon';
 
         $this->assertEquals($expected_url, $user->getAvatarUrl());
     }
