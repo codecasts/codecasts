@@ -2,9 +2,6 @@
 
 namespace Codecasts\Domains\Lessons;
 
-use Codecasts\Domains\Lessons\Lesson;
-use Codecasts\Domains\Lessons\Track;
-
 class TrackTest extends \TestCase
 {
     /** @test */
