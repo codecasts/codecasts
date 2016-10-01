@@ -9,10 +9,7 @@ class TrackTest extends \TestCase
     {
         $track = factory(Track::class)->make();
 
-        $lessons = collect([
-            factory(Lesson::class)->make(),
-            factory(Lesson::class)->make(),
-        ]);
+        $lessons = factory(Lesson::class, 2)->make();
 
         $track->setRelation('lessons', $lessons);
 
@@ -24,10 +21,7 @@ class TrackTest extends \TestCase
     {
         $track = factory(Track::class)->make();
 
-        $lessons = collect([
-            factory(Lesson::class)->make(),
-            factory(Lesson::class)->make(),
-        ]);
+        $lessons = factory(Lesson::class, 2)->make();
 
         $track->setRelation('lessons', $lessons);
 
