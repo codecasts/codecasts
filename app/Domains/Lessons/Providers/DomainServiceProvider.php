@@ -29,7 +29,7 @@ class DomainServiceProvider extends ServiceProvider
 
     protected $bindings = [
         LessonRepositoryContract::class => LessonRepository::class,
-        TrackRepositoryContract::class => TrackRepository::class,
+        TrackRepositoryContract::class  => TrackRepository::class,
     ];
 
     protected $subProviders = [
