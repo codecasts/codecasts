@@ -116,6 +116,7 @@
 <script src="{{ elixir('js/app.js') }}"></script>
 @include('core::_sentry')
 @include('core::_analytics')
-@include('core::_crisp')
+{{-- disabling crisp for now --}}
+{{-- @include('core::_crisp') --}}
 </body>
 </html>
