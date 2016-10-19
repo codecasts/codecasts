@@ -56,8 +56,8 @@ class LessonController extends Controller
                 $this->seo()->addImages($lesson->thumb_url);
             }
 
-            if ($lesson->track) {
-                $this->seo()->setTitle($lesson->title.' ['.$lesson->track->title.']');
+            if ($lesson->serie) {
+                $this->seo()->setTitle($lesson->title.' ['.$lesson->serie->title.']');
             } else {
                 $this->seo()->setTitle($lesson->title);
             }

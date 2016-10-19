@@ -2,15 +2,15 @@
 
 namespace Codecasts\Domains\Lessons\Database\Factories;
 
-use Codecasts\Domains\Lessons\Track;
+use Codecasts\Domains\Lessons\Serie;
 use Codecasts\Support\Domain\ModelFactory;
 
 /**
- * Class TrackFactory.
+ * Class SerieFactory.
  */
-class TrackFactory extends ModelFactory
+class SerieFactory extends ModelFactory
 {
-    protected $model = Track::class;
+    protected $model = Serie::class;
 
     public function fields()
     {

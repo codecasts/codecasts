@@ -11,8 +11,8 @@
                         <h3><i class="icon-control-play"></i> {{ $lesson->title }}</h3>
                     </div>
                     <div class="col-md-6 text-right">
-                        @if($lesson->track)
-                            <h3><i class="icon-layers"></i> {{ $lesson->track->title }}</h3>
+                        @if($lesson->serie)
+                            <h3><i class="icon-layers"></i> {{ $lesson->serie->title }}</h3>
                         @endif
                     </div>
                 </div>
@@ -130,36 +130,36 @@
                 &nbsp;
             </div>
         </div>
-        @if($lesson->track)
+        @if($lesson->serie)
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <h4><strong><i class="icon-layers"></i> {{ $lesson->track->title }}</strong></h4>
+                        <h4><strong><i class="icon-layers"></i> {{ $lesson->serie->title }}</strong></h4>
                         <table class="table">
 
                             <tbody>
-                            @foreach($lesson->track->lessons()->where('published', true)->orderBy('published_at')->get() as $track_lesson)
+                            @foreach($lesson->serie->lessons()->where('published', true)->orderBy('published_at')->get() as $serie_lesson)
                                 <tr>
                                     <td>
-                                        <a href="{{ route('lesson.show', [$track_lesson->slug]) }}">
-                                            @if($lesson->id == $track_lesson->id)
+                                        <a href="{{ route('lesson.show', [$serie_lesson->slug]) }}">
+                                            @if($lesson->id == $serie_lesson->id)
                                                 <strong>
-                                                    <i class="icon-control-play"></i> [{{ mb_strtoupper(trans('lesson::lesson.current')) }}] {{ $track_lesson->title }}
-                                                    @if(!$track_lesson->paid)
+                                                    <i class="icon-control-play"></i> [{{ mb_strtoupper(trans('lesson::lesson.current')) }}] {{ $serie_lesson->title }}
+                                                    @if(!$serie_lesson->paid)
                                                         <small class="label label-success lesson-paid">FREE</small>
                                                     @endif
                                                 </strong>
                                             @else
-                                                <i class="icon-control-play"></i> {{ $track_lesson->title }}
-                                                @if(!$track_lesson->paid)
+                                                <i class="icon-control-play"></i> {{ $serie_lesson->title }}
+                                                @if(!$serie_lesson->paid)
                                                     <small class="label label-success lesson-paid">FREE</small>
                                                 @endif
                                             @endif
                                         </a>
                                     </td>
                                     <td class="text-right">
-                                        <small>{{ $track_lesson->present()->length() }} <i class="fa fa-clock-o"></i></small>
+                                        <small>{{ $serie_lesson->present()->length() }} <i class="fa fa-clock-o"></i></small>
                                         </td>
                                 </tr>
                             @endforeach

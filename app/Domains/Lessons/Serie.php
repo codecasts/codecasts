@@ -2,16 +2,16 @@
 
 namespace Codecasts\Domains\Lessons;
 
-use Codecasts\Domains\Lessons\Presenters\TrackPresenter;
+use Codecasts\Domains\Lessons\Presenters\SeriePresenter;
 use Codecasts\Support\ViewPresenter\Presentable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Track extends Model
+class Serie extends Model
 {
     use SoftDeletes, Presentable;
 
-    protected $table = 'tracks';
+    protected $table = 'series';
 
     protected $fillable = [
         'title',
@@ -24,11 +24,11 @@ class Track extends Model
     //    'visible' =>  'boolean',
     //];
 
-    protected $presenter = TrackPresenter::class;
+    protected $presenter = SeriePresenter::class;
 
     public function lessons()
     {
-        return $this->hasMany(Lesson::class, 'track_id');
+        return $this->hasMany(Lesson::class, 'serie_id');
     }
 
     public function firstLessonSlug()

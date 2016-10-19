@@ -32,7 +32,7 @@ class PagesController extends Controller
         $data['php_version'] = (new PHP())->get();
         $data['lessons_count'] = (new Lessons())->getCount();
         $data['lessons_time'] = (new Lessons())->getTime();
-        $data['tracks'] = (new Lessons())->getTracks();
+        $data['series'] = (new Lessons())->getSeries();
 
         return $this->view('pages::statistics')->with($data);
     }

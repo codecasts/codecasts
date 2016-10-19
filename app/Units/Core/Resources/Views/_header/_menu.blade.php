@@ -1,11 +1,11 @@
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
 
-        <li class="{{ (!Request::is('lesson/track*') and Request::is('lesson*')) ? 'active':'' }}">
+        <li class="{{ (!Request::is('lesson/serie*') and Request::is('lesson*')) ? 'active':'' }}">
             <a href="{{ route('lesson.index') }}"><i class="icon-control-play"></i> {{ ucfirst(trans('core::menu.lessons')) }}</a>
         </li>
         <li class="{{ Request::is('series*') ? 'active':'' }}">
-            <a href="{{ route('lesson.track.index') }}"><i class="icon-layers"></i> {{ ucfirst(trans('core::menu.track')) }}</a>
+            <a href="{{ route('lesson.serie.index') }}"><i class="icon-layers"></i> {{ ucfirst(trans('core::menu.serie')) }}</a>
         </li>
         <li class="{{ Request::is('podcast*') ? 'active':'' }}">
             <a href="{{ route('podcast.index') }}"><i class="icon-playlist"></i> {{ ucfirst(trans('core::menu.podcast')) }}</a>

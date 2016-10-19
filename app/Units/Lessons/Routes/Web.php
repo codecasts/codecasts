@@ -18,15 +18,15 @@ class Web extends RouteFile
      */
     public function routes()
     {
-        $this->trackRoutes();
+        $this->serieRoutes();
         $this->lessonRoutes();
     }
 
-    protected function trackRoutes()
+    protected function serieRoutes()
     {
-        // Tracks
-        $this->router->get('series', ['as' => 'lesson.track.index', 'uses' => 'TrackController@index']);
-        $this->router->get('series/{slug}', ['as' => 'track.show', 'uses' => 'TrackController@show']);
+        // Series
+        $this->router->get('series', ['as' => 'lesson.serie.index', 'uses' => 'SerieController@index']);
+        $this->router->get('series/{slug}', ['as' => 'serie.show', 'uses' => 'SerieController@show']);
     }
 
     protected function lessonRoutes()
