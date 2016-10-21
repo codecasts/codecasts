@@ -3,7 +3,7 @@
 namespace Codecasts\Support\Statistics\Sources;
 
 use Codecasts\Domains\Lessons\Repositories\LessonRepository;
-use Codecasts\Domains\Lessons\Repositories\SerieRepository;
+use Codecasts\Domains\Lessons\Repositories\TrackRepository;
 use Codecasts\Support\Helpers\TimeHelper;
 
 class Lessons extends Source
@@ -27,11 +27,11 @@ class Lessons extends Source
         return $this->getLessonsCount();
     }
 
-    public function getSeries()
+    public function getTracks()
     {
-        $serieRepository = new SerieRepository();
+        $trackRepository = new TrackRepository();
 
-        return $serieRepository->getVisible(false, false)->count();
+        return $trackRepository->getVisible(false, false)->count();
     }
 
     protected function getHumanPublishedTime()

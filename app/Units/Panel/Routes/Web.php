@@ -20,7 +20,7 @@ class Web extends RouteFile
     {
         $this->router->get('cache-clear', ['as' => 'panel.cache.clear', 'uses' => 'UtilsController@cacheClear']);
         $this->router->get('dashboard', ['as' => 'panel.dashboard', 'uses' => 'DashboardController@dashboard']);
-        $this->router->resource('lesson/serie', 'Lesson\SerieController', ['as' => 'panel.lesson']);
+        $this->router->resource('lesson/track', 'Lesson\TrackController', ['as' => 'panel.lesson']);
         $this->router->resource('lesson', 'Lesson\LessonController', ['as' => 'panel']);
     }
 }

@@ -5,7 +5,7 @@
 @endsection
 
 @section('panel-actions')
-    <a href="{{ route('panel.lesson.serie.create') }}" class="btn btn-sm btn-success"><i class="fa fa-plus"></i> Nova Série</a>
+    <a href="{{ route('panel.lesson.track.create') }}" class="btn btn-sm btn-success"><i class="fa fa-plus"></i> Nova Série</a>
 @endsection
 
 @section('panel-content')
@@ -20,17 +20,17 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($series as $serie)
+            @foreach($tracks as $track)
                 <tr>
-                    <td>{{ $serie->id }}</td>
-                    <td>{{ $serie->title }}</td>
-                    <td>{{ $serie->visible ? 'Sim':'Não' }}</td>
-                    <td>{{ $serie->lessonCount() }}</td>
+                    <td>{{ $track->id }}</td>
+                    <td>{{ $track->title }}</td>
+                    <td>{{ $track->visible ? 'Sim':'Não' }}</td>
+                    <td>{{ $track->lessonCount() }}</td>
                     <td class="text-right">
-                        <form role="form" class="form-sm form-horizontal" method="post" action="{{ route('panel.lesson.serie.destroy', [$serie->id]) }}">
+                        <form role="form" class="form-sm form-horizontal" method="post" action="{{ route('panel.lesson.track.destroy', [$track->id]) }}">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <input type="hidden" name="_method" value="DELETE">
-                            <a href="{{ route('panel.lesson.serie.edit', [$serie->id]) }}" class="btn btn-xs btn-primary">Editar</a>
+                            <a href="{{ route('panel.lesson.track.edit', [$track->id]) }}" class="btn btn-xs btn-primary">Editar</a>
                             <button class="btn btn-danger btn-xs" type="submit">Remover</button>
                         </form>
                     </td>
@@ -42,6 +42,6 @@
 
 
 @section('panel-pagination')
-    {!! $series->render() !!}
+    {!! $tracks->render() !!}
 @endsection
 

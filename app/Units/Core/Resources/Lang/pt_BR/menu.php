@@ -2,7 +2,7 @@
 
 return [
     'lessons'        => 'aulas',
-    'serie'          => 'séries',
+    'track'          => 'séries',
     'suggestions'    => 'sugestões',
     'discuss'        => 'discutir',
     'subscribe'      => 'assinar',

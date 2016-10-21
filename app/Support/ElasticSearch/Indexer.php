@@ -37,7 +37,7 @@ class Indexer
         $elastic = app('elastic');
 
         $this->items->each(function ($item) use ($elastic) {
-            $item->serie_title = $item->serie ? $item->serie->title : '';
+            $item->track_title = $item->track ? $item->track->title : '';
 
             $elastic->index([
                 'index' => 'codecasts',

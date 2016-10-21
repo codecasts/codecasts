@@ -23,7 +23,7 @@ class DashboardController extends Controller
         $data['php_version'] = (new PHP())->get();
         $data['lessons_count'] = (new Lessons())->getCount();
         $data['lessons_time'] = (new Lessons())->getTime();
-        $data['series'] = (new Lessons())->getSeries();
+        $data['tracks'] = (new Lessons())->getTracks();
         $data['users'] = (new Users())->get();
 
         return $this->view('panel::dashboard')->with($data);

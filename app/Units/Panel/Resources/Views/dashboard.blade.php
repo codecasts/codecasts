@@ -40,7 +40,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Séries</div>
                 <div class="panel-body text-center">
-                    <h1>{{ $series }}</h1>
+                    <h1>{{ $tracks }}</h1>
                 </div>
             </div>
         </div>

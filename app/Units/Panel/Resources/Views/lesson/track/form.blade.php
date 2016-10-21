@@ -19,6 +19,6 @@
 <div class="form-group @hasErrorClass('visible')">
     {!! app()->form->label('visible', 'Visivel') !!}
 
-    {!! app()->form->select('visible', [0 => 'Não', 1 => 'Sim'], (isset($serie) && $serie && $serie->visible), ['class' => 'form-control']) !!}
+    {!! app()->form->select('visible', [0 => 'Não', 1 => 'Sim'], (isset($track) && $track && $track->visible), ['class' => 'form-control']) !!}
     @errorBlock('visible')
 </div>

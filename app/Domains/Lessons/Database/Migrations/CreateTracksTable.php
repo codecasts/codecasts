@@ -5,14 +5,14 @@ namespace Codecasts\Domains\Lessons\Database\Migrations;
 use Codecasts\Support\Domain\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateSeriesTable extends Migration
+class CreateTracksTable extends Migration
 {
     /**
      * Run the migrations.
      */
     public function up()
     {
-        $this->schema->create('series', function (Blueprint $table) {
+        $this->schema->create('tracks', function (Blueprint $table) {
             $table->increments('id');
             $table->string('slug')->unique()->index();
             $table->string('title');
@@ -28,6 +28,6 @@ class CreateSeriesTable extends Migration
      */
     public function down()
     {
-        $this->schema->drop('series');
+        $this->schema->drop('tracks');
     }
 }
