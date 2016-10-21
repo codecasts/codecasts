@@ -23,10 +23,10 @@
                         <li class="{{ Request::is('panel/dashboard*') ? 'active':'' }}">
                             <a href="{{ route('panel.dashboard') }}"><i class="icon-speedometer"></i> Dashboard</a>
                         </li>
-                        <li class="{{ Request::is('panel/lesson/track*') ? 'active':'' }}">
-                            <a href="{{ route('panel.lesson.track.index') }}"><i class="icon-layers"></i> Séries</a>
+                        <li class="{{ Request::is('panel/lesson/serie*') ? 'active':'' }}">
+                            <a href="{{ route('panel.lesson.serie.index') }}"><i class="icon-layers"></i> Séries</a>
                         </li>
-                        <li class="{{ (!Request::is('panel/lesson/track*') and Request::is('panel/lesson*')) ? 'active':'' }}">
+                        <li class="{{ (!Request::is('panel/lesson/serie*') and Request::is('panel/lesson*')) ? 'active':'' }}">
                             <a href="{{ route('panel.lesson.index') }}"><i class="icon-control-play"></i> Aulas</a>
                         </li>
                         <li class="{{ Request::is('panel/suggestion*') ? 'active':'' }}">

@@ -5,7 +5,7 @@ namespace Codecasts\Domains\Lessons\Presenters;
 use Codecasts\Support\Helpers\TimeHelper;
 use Codecasts\Support\ViewPresenter\Presenter;
 
-class TrackPresenter extends Presenter
+class SeriePresenter extends Presenter
 {
     public function length()
     {

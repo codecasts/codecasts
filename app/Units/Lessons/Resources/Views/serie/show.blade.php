@@ -4,14 +4,14 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8">
-                <h3><i class="icon-layers"></i> {{ $track->title }}</h3>
+                <h3><i class="icon-layers"></i> {{ $serie->title }}</h3>
             </div>
             <div class="col-md-4 text-right" style="padding-top: 20px;">
 
                     <button class="btn btn-sm btn-social-icon btn-facebook" data-share data-share-facebook data-share-facebook-url="{{ Request::url() }}">
                         <i class="fa fa-facebook"></i>
                     </button>
-                    <button class="btn btn-sm btn-social-icon btn-twitter" data-share data-share-twitter data-share-twitter-title="{{ 'Série ' . $track->title }} - CODECASTS" data-share-twitter-via="code_casts" data-share-twitter-url="{{ Request::url() }}">
+                    <button class="btn btn-sm btn-social-icon btn-twitter" data-share data-share-twitter data-share-twitter-title="{{ 'Série ' . $serie->title }} - CODECASTS" data-share-twitter-via="code_casts" data-share-twitter-url="{{ Request::url() }}">
                         <i class="fa fa-twitter"></i>
                     </button>
                     <button class="btn btn-sm btn-social-icon btn-google" data-share data-share-google data-share-google-url="{{ Request::url() }}">
@@ -28,7 +28,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="well">
-                    {{ $track->description }}
+                    {{ $serie->description }}
                 </div>
 
             </div>
@@ -36,7 +36,7 @@
                 <table class="table">
 
                     <tbody>
-                    @foreach($track->lessons()->orderBy('published_at')->get() as $lesson)
+                    @foreach($serie->lessons()->orderBy('published_at')->get() as $lesson)
                         <tr>
                             <td>
                                 <a href="{{ route('lesson.show', [$lesson->slug]) }}">

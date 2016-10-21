@@ -34,7 +34,7 @@ class Lesson extends Model
         'published',
         'visible',
         'paid',
-        'track_id',
+        'serie_id',
         'published_at',
 
     ];
@@ -43,9 +43,9 @@ class Lesson extends Model
         'published_at',
     ];
 
-    public function track()
+    public function serie()
     {
-        return $this->belongsTo(Track::class, 'track_id');
+        return $this->belongsTo(Serie::class, 'serie_id');
     }
 
     public function tags()
