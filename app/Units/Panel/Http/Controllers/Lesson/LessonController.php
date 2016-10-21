@@ -4,7 +4,7 @@ namespace Codecasts\Units\Panel\Http\Controllers\Lesson;
 
 use Artesaos\SEOTools\Traits\SEOTools;
 use Codecasts\Domains\Lessons\Contracts\LessonRepository;
-use Codecasts\Domains\Lessons\Contracts\SerieRepository;
+use Codecasts\Domains\Lessons\Contracts\TrackRepository;
 use Codecasts\Domains\Users\Contracts\UserRepository;
 use Codecasts\Support\Http\Controller;
 use Codecasts\Units\Panel\Http\Requests\Lesson\NewLessonRequest;
@@ -35,15 +35,15 @@ class LessonController extends Controller
         return $this->view('panel::lesson.index')->with(compact('lessons'));
     }
 
-    public function create(UserRepository $userRepository, SerieRepository $serieRepository)
+    public function create(UserRepository $userRepository, TrackRepository $trackRepository)
     {
         $this->seo()->setTitle('Nova Aula');
 
         $users = $userRepository->getAdmins();
 
-        $series = $serieRepository->getAll(false, false);
+        $tracks = $trackRepository->getAll(false, false);
 
-        return $this->view('panel::lesson.create')->with(compact('users', 'series'));
+        return $this->view('panel::lesson.create')->with(compact('users', 'tracks'));
     }
 
     public function store(NewLessonRequest $request)
@@ -71,7 +71,7 @@ class LessonController extends Controller
         return redirect()->back()->withInput();
     }
 
-    public function edit($id, UserRepository $userRepository, SerieRepository $serieRepository)
+    public function edit($id, UserRepository $userRepository, TrackRepository $trackRepository)
     {
         $this->seo()->setTitle('Editar Aula');
 
@@ -80,9 +80,9 @@ class LessonController extends Controller
         if ($lesson) {
             $users = $userRepository->getAdmins();
 
-            $series = $serieRepository->getAll(false, false);
+            $tracks = $trackRepository->getAll(false, false);
 
-            return $this->view('panel::lesson.edit')->with(compact('lesson', 'users', 'series'));
+            return $this->view('panel::lesson.edit')->with(compact('lesson', 'users', 'tracks'));
         }
 
         return redirect(route('panel.lesson.index'));

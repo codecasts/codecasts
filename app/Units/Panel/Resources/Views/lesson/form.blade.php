@@ -4,10 +4,10 @@
     @errorBlock('title')
 </div>
 
-<div class="form-group @hasErrorClass('serie_id')">
-    {!! app()->form->label('serie_id', 'Série') !!}
-    {!! app()->form->select('serie_id', $series->pluck('title', 'id'), (isset($lesson) && $lesson) ? $lesson->serie_id: null, ['class' => 'form-control']) !!}
-    @errorBlock('serie_id')
+<div class="form-group @hasErrorClass('track_id')">
+    {!! app()->form->label('track_id', 'Série') !!}
+    {!! app()->form->select('track_id', $tracks->pluck('title', 'id'), (isset($lesson) && $lesson) ? $lesson->track_id: null, ['class' => 'form-control']) !!}
+    @errorBlock('track_id')
 </div>
 
 <div class="form-group @hasErrorClass('author_id')">

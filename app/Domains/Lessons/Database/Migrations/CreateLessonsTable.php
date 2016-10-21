@@ -24,7 +24,7 @@ class CreateLessonsTable extends Migration
             $table->boolean('published')->default(false);
             $table->boolean('visible')->default(false);
             $table->boolean('paid')->default(true);
-            $table->integer('serie_id', false, true)->nullable()->index();
+            $table->integer('track_id', false, true)->nullable()->index();
             $table->timestamp('published_at')->nullable();
             $table->unsignedInteger('times_downloaded')->default(0);
             $table->unsignedInteger('times_played')->default(0);

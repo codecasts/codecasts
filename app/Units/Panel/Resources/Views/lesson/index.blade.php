@@ -27,8 +27,8 @@
                     <td>{{ $lesson->id }}</td>
                     <td>
                         <strong>{{ $lesson->title }}</strong>
-                        @if($lesson->serie)
-                            <div class="small">{{ $lesson->serie->title }}</div>
+                        @if($lesson->track)
+                            <div class="small">{{ $lesson->track->title }}</div>
                         @endif
                     </td>
                     <td>{{ "@".$lesson->author->username }}</td>

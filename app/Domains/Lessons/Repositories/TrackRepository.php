@@ -4,17 +4,17 @@ namespace Codecasts\Domains\Lessons\Repositories;
 
 use Artesaos\Warehouse\AbstractCrudRepository;
 use Artesaos\Warehouse\Traits\ImplementsFractal;
-use Codecasts\Domains\Lessons\Contracts\SerieRepository as SerieRepositoryContract;
-use Codecasts\Domains\Lessons\Serie;
-use Codecasts\Domains\Lessons\Transformers\SerieTransformer;
+use Codecasts\Domains\Lessons\Contracts\TrackRepository as TrackRepositoryContract;
+use Codecasts\Domains\Lessons\Track;
+use Codecasts\Domains\Lessons\Transformers\TrackTransformer;
 
-class SerieRepository extends AbstractCrudRepository implements SerieRepositoryContract
+class TrackRepository extends AbstractCrudRepository implements TrackRepositoryContract
 {
     use ImplementsFractal;
 
-    protected $modelClass = Serie::class;
+    protected $modelClass = Track::class;
 
-    protected $transformerClass = SerieTransformer::class;
+    protected $transformerClass = TrackTransformer::class;
 
     public function getAll($take = 15, $paginate = true)
     {
@@ -27,7 +27,7 @@ class SerieRepository extends AbstractCrudRepository implements SerieRepositoryC
      * @param string $slug
      * @param bool   $fail
      *
-     * @return Serie|null
+     * @return Track|null
      */
     public function findBySlug($slug, $fail = false)
     {
@@ -43,9 +43,9 @@ class SerieRepository extends AbstractCrudRepository implements SerieRepositoryC
     public function getVisible($take = 9, $paginate = true)
     {
         $query = $this->newQuery();
-        $query->leftJoin('lessons', 'lessons.serie_id', '=', 'series.id');
-        $query->select('series.*');
-        $query->groupBy('series.id');
+        $query->leftJoin('lessons', 'lessons.track_id', '=', 'tracks.id');
+        $query->select('tracks.*');
+        $query->groupBy('tracks.id');
         $query->orderByRaw('max(lessons.published_at) desc');
 
         return $this->doQuery($query, $take, $paginate);
