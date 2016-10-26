@@ -10,21 +10,22 @@ services:
 
 # cusomize Travis Branch to avoid invalid Docker tags
 before_install:
-  - DOCKER_REPO="codecasts/codecasts"
   - DOCKER_TAG=$(echo "$TRAVIS_BRANCH" | iconv -t ascii//TRANSLIT | sed -r s/[^a-zA-Z0-9]+/-/g | sed -r s/^-+\|-+$//g | tr A-Z a-z)
+  - DOCKER_IMAGE=$DOCKER_REPO:$DOCKER_TAG
 
 # build this code into a docker image
 install:
-  - docker build -t $DOCKER_REPO:$DOCKER_TAG .
+  - docker build -t $DOCKER_IMAGE .
 
 # run unit tests
 script:
-  - docker run -it -e TRAVIS_COMMIT=$TRAVIS_COMMIT -e TRAVIS_BRANCH=$TRAVIS_BRANCH -e TRAVIS_BUILD_NUMBER=$TRAVIS_BUILD_NUMBER -e CODECOV_TOKEN=$CODECOV_TOKEN $DOCKER_REPO:$DOCKER_TAG bash .test.sh
+  - docker run -it -e TRAVIS_COMMIT=$TRAVIS_COMMIT -e TRAVIS_BRANCH=$TRAVIS_BRANCH -e TRAVIS_BUILD_NUMBER=$TRAVIS_BUILD_NUMBER -e CODECOV_TOKEN=$CODECOV_TOKEN $DOCKER_IMAGE bash .test.sh
 
 # if tests passes, push the docker image
 after_success:
   - test $TRAVIS_PULL_REQUEST == false && docker login -u "$DOCKER_USER" -p "$DOCKER_PASSWORD"
-  - test $TRAVIS_PULL_REQUEST == false && docker push $DOCKER_REPO:$DOCKER_TAG
+  - echo $DOCKER_IMAGE
+  - test $TRAVIS_PULL_REQUEST == false && docker push $DOCKER_IMAGE
 
 # notify slack about it
 notifications:
