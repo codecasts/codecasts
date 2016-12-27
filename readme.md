@@ -126,3 +126,5 @@ Code coverage as HTML is already ignored on git when generated on the `coverage`
 ```php
 php vendor/bin/phpunit --coverage-html=coverage
 ```
+
+:)
