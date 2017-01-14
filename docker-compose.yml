@@ -39,9 +39,9 @@ services:
       - cache
       - elastic
 
-  # PostgreSQL (9.5)
+  # PostgreSQL (9.6)
   pgsql:
-    image: ambientum/postgres:9.5
+    image: ambientum/postgres:9.6
     container_name: codecasts-pgsql
     volumes:
       - codecasts-pgsql-data:/var/lib/postgresql/data
