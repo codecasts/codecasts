@@ -84,6 +84,7 @@
 
                                     <li><a href="{{ route('support') }}"><i class="icon-support"></i> Suporte</a></li>
                                     <li><a href="{{ route('statistics') }}"><i class="icon-plane"></i> Estatísticas</a></li>
+                                    <li><a href="#"><i class="icon-question"></i> Perguntas Frequentes</a></li>
                                     @if($user && $user->admin)
                                         <li><a href="{{ route('panel.dashboard') }}"><i class="icon-lock"></i> Administração</a></li>
                                     @endif
@@ -91,7 +92,7 @@
                             </div>
                             <div class="col-md-6">
                                 <ul class="footer-links">
-                                    <li><a href="#"><i class="icon-question"></i> Perguntas Frequentes</a></li>
+                                    <li><a href="{{ route('podcast.index') }}"><i class="icon-playlist"></i> Podcast</a></li>
                                     <li><a href="{{ route('policy') }}"><i class="icon-doc"></i> Política de Uso</a></li>
                                 </ul>
                             </div>

@@ -7,9 +7,6 @@
         <li class="{{ Request::is('series*') ? 'active':'' }}">
             <a href="{{ route('lesson.track.index') }}"><i class="icon-layers"></i> {{ ucfirst(trans('core::menu.track')) }}</a>
         </li>
-        <li class="{{ Request::is('podcast*') ? 'active':'' }}">
-            <a href="{{ route('podcast.index') }}"><i class="icon-playlist"></i> {{ ucfirst(trans('core::menu.podcast')) }}</a>
-        </li>
         <li class="{{ Request::is('suggestion*') ? 'active':'' }}">
             <a href="{{ route('suggestion.index') }}"><i class="icon-directions"></i> {{ ucfirst(trans('core::menu.suggestions')) }}</a>
         </li>
